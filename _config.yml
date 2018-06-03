@@ -1,3 +1,48 @@
-theme: jekyll-theme-dinky
-baseurl: ""
-url: "https://ariselab.github.io"
+theme.                   : jekyll-theme-dinky
+locale                   : "en-US"
+title                    : "ARiSE Lab @ Columbia University"
+title_separator          : " "
+name                     : &name "ARiSE Lab"
+description              : &description "Analytical Research in Software Engineering"
+url                      : https://ariselab.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "ariselab.github.io"
+teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+breadcrumbs              : false # true, false (default)
+words_per_minute         : 160
+
+
+# Site Author
+author:
+  name             : "ARiSE Lab"
+  avatar           : "site-logo.png"
+  bio              : #"Your biography for the left-hand sidebar"
+  location         : #"Location"
+  employer         :
+  googlescholar    : "http://yourfullgooglescholarurl.com"
+  email            :
+  uri              :
+  bitbucket        :
+  codepen          :
+  dribbble         :
+  flickr           :
+  facebook         :
+  foursquare       :
+  github           : "ariselab"
+  google_plus      :
+  keybase          :
+  instagram        :
+  lastfm           :
+  linkedin         :
+  orcid            : "http://orcid.org/yourorcidurl"
+  pinterest        :
+  soundcloud       :
+  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  steam            :
+  tumblr           :
+  twitter          : "replacethistwitterhandle"
+  vine             :
+  weibo            :
+  xing             :
+  youtube          :
+  wikipedia        :
