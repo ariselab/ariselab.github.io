@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "ARiSE Lab @ Columbia University"
+title                    : "ARiSE Lab @ \\ Columbia University"
 title_separator          : " "
 name                     : &name "ARiSE Lab"
 description              : &description "Analytical Research in Software Engineering"
