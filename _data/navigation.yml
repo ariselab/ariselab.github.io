@@ -5,3 +5,7 @@ main:
     
   - title: "Projects"
     url: /projects/
+
+  - title: "Members"
+    url: /members/
+
