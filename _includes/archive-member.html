@@ -19,8 +19,12 @@
     {{ post.name }}
     <br />
     Email: {{ post.email }}
-    <br />
+    <br />    
+    {{ post.excerpt }}
+     <br /> 
+    {{ post.website | markdownify }}
     
+    <p>{{ post.description }}</p>
 
   </article>
 </div>
