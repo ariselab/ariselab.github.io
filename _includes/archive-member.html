@@ -15,10 +15,17 @@
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <h2>{{ post.name }}</h2>
-    {{ post.image }} <br />
-    Email: <a href='mailto:{{ post.email }}'>{{ post.email }} </a> <br />    
-    {{ post.excerpt }}<br /> 
-    {{ post.website | markdownify }}
-    <p><b>Interest :</b>{{ post.description }}</p>
+    <table>
+      <tr>
+        <td>{{ post.image }}</td>
+        <td>
+          Email: <a href='mailto:{{ post.email }}'>{{ post.email }} </a> <br />    
+          {{ post.excerpt }}<br /> 
+          {{ post.website | markdownify }}
+          <p><b>Interest :</b>{{ post.description }}</p>
+        </td>
+      </tr>
+    </table>
+     <br />
   </article>
 </div>
