@@ -10,5 +10,5 @@ author_profile: true
 {% include base_path %}
 
 {% for post in site.members reversed %}
-  {% include archive-single.html %}
+  {% include archive-member.html %}
 {% endfor %}
