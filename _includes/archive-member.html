@@ -14,14 +14,14 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <h2>{{ post.name }}</h2>
-    <table border='0'>
-      <tr border='0'>
-        <td width='160 px'>{{ post.image }}</td>
-        <td>
-          Email: <a href='mailto:{{ post.email }}'>{{ post.email }} </a> <br />    
-          {{ post.excerpt }}<br /> 
-          {{ post.website | markdownify }}
+    <h3>{{ post.name }}</h3>
+    <table style="border-collapse: collapse; border: none;">
+      <tr style="border: none;">
+        <td style="border: none;" width="160 px">{{ post.image }}</td>
+        <td style="border: none;">
+          Email: <a href='mailto:{{ post.email }}' style="color:#5DADE2">{{ post.email }} </a> <br />    
+          <!--{{ post.excerpt }}<br /> -->
+          <font color="#5DADE2">{{ post.website | markdownify }}</font>
           <p><b>Interest : </b>{{ post.description }}</p>
         </td>
       </tr>
