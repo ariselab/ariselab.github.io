@@ -11,35 +11,38 @@
 {% else %}
   {% assign title = post.title %}
 {% endif %}
- <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>
+<!-- <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time> -->
+
 <style>
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    table-layout: auto;
 }
 
+
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #F2F7FA;
     text-align: left;
     padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #F2F7FA;
 }
 </style>
 
 <table>
   <tr>
-    <th>paper</th>
-    <th>link</th>
-    <th>presenter</th>
+    <th>Date</th>
+    <th>Paper</th>
+    <th>Presenter</th>
   </tr>
   <tr>
-    <td>{{post.paper}}</td>
-    <td>{{post.link}}</td>
-    <td>{{post.presenter}}</td>
+    <td width="140 px"> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time>
+    </td>
+    <td width="380 px"><a href="{{post.link}}" style="color:green" target="_blank">{{post.paper}}</a></td>
+    <td width="100 px">{{post.presenter}}</td>
   </tr>
 
 </table>
