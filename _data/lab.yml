@@ -1,0 +1,13 @@
+name: "ARiSE Lab"
+full_name: "Analytical Research in Software Engineering"
+university: "Columbia University"
+department: "Department of Computer Science"
+description: "We conduct research at the intersection of software engineering, programming languages, and machine learning to improve software reliability and security."
+logo: "/images/site-logo.png"
+location: "CEPSR, Columbia University, New York, NY"
+
+# Social / contact links
+email: ""
+github: "ariselab"
+google_scholar: ""
+twitter: ""

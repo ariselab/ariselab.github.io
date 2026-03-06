@@ -1,0 +1,9 @@
+# Add projects here.
+# Fields: title, description, image (optional), website (optional), github (optional), status (active/completed)
+
+- title: "Project Example"
+  description: "A brief description of the research project and its goals."
+  image: ""
+  website: ""
+  github: ""
+  status: "active"

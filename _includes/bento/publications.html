@@ -1,0 +1,43 @@
+<section class="section section--pubs" id="publications">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Research</span>
+      <h2 class="section__title">Publications</h2>
+    </div>
+
+    {% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+    {% for year_group in pubs_by_year %}
+    <div class="pub-year-group reveal">
+      <div class="pub-year-badge">{{ year_group.name }}</div>
+      <div class="pub-list">
+        {% for pub in year_group.items %}
+        <div class="pub-card">
+          <div class="pub-card__content">
+            {% if pub.award and pub.award != "" %}
+            <span class="pub-card__award">{{ pub.award }}</span>
+            {% endif %}
+            <h3 class="pub-card__title">
+              {% if pub.paper_url and pub.paper_url != "" %}
+              <a href="{{ pub.paper_url }}">{{ pub.title }}</a>
+              {% else %}
+              {{ pub.title }}
+              {% endif %}
+            </h3>
+            <p class="pub-card__authors">{{ pub.authors }}</p>
+            <p class="pub-card__venue">{{ pub.venue }}</p>
+            <div class="pub-card__links">
+              {% if pub.paper_url and pub.paper_url != "" %}
+              <a href="{{ pub.paper_url }}" class="pill-link">PDF</a>
+              {% endif %}
+              {% if pub.code_url and pub.code_url != "" %}
+              <a href="{{ pub.code_url }}" class="pill-link">Code</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

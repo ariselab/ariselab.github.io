@@ -1,0 +1,26 @@
+# Add publications here, newest first.
+# Fields: title, authors, venue, year, paper_url (optional), code_url (optional), award (optional)
+
+- title: "Paper Title Number 3"
+  authors: "Author One, Author Two, Author Three"
+  venue: "Journal 3"
+  year: 2015
+  paper_url: "http://academicpages.github.io/files/paper3.pdf"
+  code_url: ""
+  award: ""
+
+- title: "Paper Title Number 2"
+  authors: "Author One, Author Two"
+  venue: "Journal 2"
+  year: 2010
+  paper_url: "http://academicpages.github.io/files/paper2.pdf"
+  code_url: ""
+  award: ""
+
+- title: "Paper Title Number 1"
+  authors: "Author One"
+  venue: "Journal 1"
+  year: 2009
+  paper_url: "http://academicpages.github.io/files/paper1.pdf"
+  code_url: ""
+  award: ""

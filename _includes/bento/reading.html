@@ -1,0 +1,45 @@
+<section class="section section--reading" id="reading">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Community</span>
+      <h2 class="section__title">{{ site.data.reading.title }}</h2>
+    </div>
+
+    <div class="bento-card bento-card--reading reveal">
+      <div class="bento-card__glow"></div>
+      <div class="reading-meta">
+        <span class="reading-meta__item">{{ site.data.reading.schedule }}</span>
+        <span class="reading-meta__sep">&middot;</span>
+        <span class="reading-meta__item">{{ site.data.reading.location }}</span>
+        <span class="reading-meta__sep">&middot;</span>
+        <span class="reading-meta__item">{{ site.data.reading.semester }}</span>
+      </div>
+      <div class="reading-table-wrap">
+        <table class="reading-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Paper</th>
+              <th>Presenter</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for entry in site.data.reading.papers %}
+            <tr>
+              <td class="reading-table__date">{{ entry.date | date: "%b %d, %Y" }}</td>
+              <td>
+                {% if entry.link and entry.link != "" %}
+                <a href="{{ entry.link }}">{{ entry.paper }}</a>
+                {% else %}
+                {{ entry.paper }}
+                {% endif %}
+              </td>
+              <td>{{ entry.presenter }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

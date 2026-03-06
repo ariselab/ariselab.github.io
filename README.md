@@ -1,31 +1,113 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# ARiSE Lab Website
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+GitHub Pages site for the **ARiSE Lab** (Analytical Research in Software Engineering) at Columbia University.
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+Built with [Jekyll](https://jekyllrb.com/) and a custom bento-grid / glassmorphism dark theme.
 
-# Instructions
+## Project Structure
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+```
+_data/              # All site data (edit these to update content)
+  lab.yml           # Lab name, description, social links
+  members.yml       # Faculty, PhD students, masters, alumni
+  publications.yml  # Papers (title, authors, venue, year, links)
+  projects.yml      # Research projects
+  news.yml          # News/announcements
+  reading.yml       # Reading group schedule and papers
 
-See more info at https://academicpages.github.io/
+_layouts/           # Page layouts
+  bento.html        # Main bento-grid layout (dark theme)
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+_includes/bento/    # Reusable components
+  nav.html          # Fixed navigation bar
+  hero.html         # Hero section with mesh gradient
+  overview.html     # Bento grid: about, stats, news, featured pub
+  publications.html # Publications grouped by year
+  members.html      # Team members by role
+  projects.html     # Project cards
+  reading.html      # Reading group table
+  footer.html       # Site footer
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs build-essential patch zlib1g-dev liblzma-dev`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `sudo bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+_pages/home.html    # Homepage (assembles all sections)
+assets/css/bento.css  # All styles
+assets/js/bento.js    # Scroll animations, glow effects, mobile nav
+```
 
-# Changelog -- bugfixes and enhancements
+## How to Add/Edit Content
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+All content lives in `_data/*.yml` files. Edit these to update the site — no HTML changes needed.
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+**Add a member** — edit `_data/members.yml`:
+```yaml
+phd_students:
+  - name: "New Person"
+    photo: "/images/photo.jpg"
+    email: "email@columbia.edu"
+    website: "https://example.com"
+    description: "Research interests..."
+```
+
+**Add a publication** — edit `_data/publications.yml`:
+```yaml
+- title: "Paper Title"
+  authors: "Author One, Author Two"
+  venue: "Conference Name"
+  year: 2026
+  paper_url: "https://link-to-paper.pdf"
+  code_url: "https://github.com/repo"
+  award: "Best Paper"  # optional
+```
+
+**Add news** — edit `_data/news.yml`:
+```yaml
+- date: 2026-03-01
+  text: "Our paper was accepted at ICSE 2026!"
+```
+
+## Running Locally
+
+### Option 1: Jekyll (full site with Liquid templates)
+
+```bash
+# Install Ruby and Bundler (macOS)
+brew install ruby
+gem install bundler
+
+# Install dependencies
+bundle install
+
+# Serve locally
+bundle exec jekyll serve
+# Open http://localhost:4000
+```
+
+### Option 2: Quick Preview (static HTML, no Jekyll required)
+
+```bash
+# Using npx (Node.js)
+npx serve .
+# Open http://localhost:3000/_preview_bento.html
+
+# Or using Python
+python3 -m http.server 8000
+# Open http://localhost:8000/_preview_bento.html
+```
+
+The `_preview_bento.html` file is a standalone version of the site with hardcoded data, useful for quickly previewing design changes without Jekyll.
+
+## Design
+
+- **Theme**: Dark, Apple-style bento grid with glassmorphism
+- **Typography**: Syne (display) + Outfit (body) via Google Fonts
+- **Features**: Animated mesh gradient hero, cursor-following glow on cards, scroll-triggered reveal animations, frosted glass cards, responsive mobile layout
+- **Colors**: Deep black background, blue-lavender accent gradient, frosted glass surfaces
+
+## Branches
+
+- `gh-pages` — production site (original academic theme)
+- `feature/bento-redesign` — this experimental dark bento-grid design
+- `feature/modern-redesign` — clean minimal light redesign experiment
+
+## Credits
+
+Originally forked from [Academic Pages](https://github.com/academicpages/academicpages.github.io) (Minimal Mistakes Jekyll Theme by Michael Rose, MIT License).

@@ -1,0 +1,123 @@
+<section class="section section--members" id="members">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Team</span>
+      <h2 class="section__title">People</h2>
+    </div>
+
+    {% if site.data.members.faculty and site.data.members.faculty.size > 0 %}
+    <div class="member-group reveal">
+      <h3 class="member-group__title">Faculty</h3>
+      <div class="bento-grid bento-grid--members">
+        {% for person in site.data.members.faculty %}
+        <div class="member-tile member-tile--large">
+          <div class="member-tile__glow"></div>
+          <div class="member-tile__photo">
+            {% if person.photo and person.photo != "" %}
+            <img src="{{ person.photo | relative_url }}" alt="{{ person.name }}" loading="lazy">
+            {% else %}
+            <div class="member-tile__avatar">{{ person.name | slice: 0 }}</div>
+            {% endif %}
+          </div>
+          <div class="member-tile__info">
+            <h4 class="member-tile__name">{{ person.name }}</h4>
+            {% if person.description and person.description != "" %}
+            <p class="member-tile__desc">{{ person.description }}</p>
+            {% endif %}
+            <div class="member-tile__links">
+              {% if person.website and person.website != "" %}
+              <a href="{{ person.website }}" class="pill-link">Website</a>
+              {% endif %}
+              {% if person.email and person.email != "" %}
+              <a href="mailto:{{ person.email }}" class="pill-link">Email</a>
+              {% endif %}
+              {% if person.google_scholar and person.google_scholar != "" %}
+              <a href="{{ person.google_scholar }}" class="pill-link">Scholar</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if site.data.members.phd_students and site.data.members.phd_students.size > 0 %}
+    <div class="member-group reveal">
+      <h3 class="member-group__title">PhD Students</h3>
+      <div class="bento-grid bento-grid--members">
+        {% for person in site.data.members.phd_students %}
+        <div class="member-tile">
+          <div class="member-tile__glow"></div>
+          <div class="member-tile__photo">
+            {% if person.photo and person.photo != "" %}
+            <img src="{{ person.photo | relative_url }}" alt="{{ person.name }}" loading="lazy">
+            {% else %}
+            <div class="member-tile__avatar">{{ person.name | slice: 0 }}</div>
+            {% endif %}
+          </div>
+          <div class="member-tile__info">
+            <h4 class="member-tile__name">{{ person.name }}</h4>
+            {% if person.description and person.description != "" %}
+            <p class="member-tile__desc">{{ person.description | truncatewords: 25 }}</p>
+            {% endif %}
+            <div class="member-tile__links">
+              {% if person.website and person.website != "" %}
+              <a href="{{ person.website }}" class="pill-link">Website</a>
+              {% endif %}
+              {% if person.email and person.email != "" %}
+              <a href="mailto:{{ person.email }}" class="pill-link">Email</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if site.data.members.masters_students and site.data.members.masters_students.size > 0 %}
+    <div class="member-group reveal">
+      <h3 class="member-group__title">Masters Students</h3>
+      <div class="bento-grid bento-grid--members">
+        {% for person in site.data.members.masters_students %}
+        <div class="member-tile">
+          <div class="member-tile__glow"></div>
+          <div class="member-tile__photo">
+            {% if person.photo and person.photo != "" %}
+            <img src="{{ person.photo | relative_url }}" alt="{{ person.name }}" loading="lazy">
+            {% else %}
+            <div class="member-tile__avatar">{{ person.name | slice: 0 }}</div>
+            {% endif %}
+          </div>
+          <div class="member-tile__info">
+            <h4 class="member-tile__name">{{ person.name }}</h4>
+            <div class="member-tile__links">
+              {% if person.website and person.website != "" %}
+              <a href="{{ person.website }}" class="pill-link">Website</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if site.data.members.alumni and site.data.members.alumni.size > 0 %}
+    <div class="member-group reveal">
+      <h3 class="member-group__title">Alumni</h3>
+      <div class="bento-grid bento-grid--members-compact">
+        {% for person in site.data.members.alumni %}
+        <div class="member-tile member-tile--compact">
+          <h4 class="member-tile__name">{{ person.name }}</h4>
+          {% if person.website and person.website != "" %}
+          <a href="{{ person.website }}" class="pill-link pill-link--sm">Website</a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>

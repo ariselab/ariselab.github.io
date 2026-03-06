@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.data.lab.name }} — {{ site.data.lab.full_name }}</title>
+  <meta name="description" content="{{ site.data.lab.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/bento.css' | relative_url }}">
+</head>
+<body>
+  {% include bento/nav.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include bento/footer.html %}
+
+  <script src="{{ '/assets/js/bento.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="footer__logo">{{ site.data.lab.name }}</span>
+        <p class="footer__tagline">{{ site.data.lab.full_name }}</p>
+        <p class="footer__address">{{ site.data.lab.location }}</p>
+      </div>
+      <div class="footer__links-col">
+        <h4 class="footer__heading">Navigate</h4>
+        <a href="#about" class="footer__link">About</a>
+        <a href="#publications" class="footer__link">Publications</a>
+        <a href="#members" class="footer__link">People</a>
+        <a href="#projects" class="footer__link">Projects</a>
+        <a href="#reading" class="footer__link">Reading Group</a>
+      </div>
+      <div class="footer__links-col">
+        <h4 class="footer__heading">Connect</h4>
+        {% if site.data.lab.github and site.data.lab.github != "" %}
+        <a href="https://github.com/{{ site.data.lab.github }}" class="footer__link">GitHub</a>
+        {% endif %}
+        {% if site.data.lab.google_scholar and site.data.lab.google_scholar != "" %}
+        <a href="{{ site.data.lab.google_scholar }}" class="footer__link">Google Scholar</a>
+        {% endif %}
+        {% if site.data.lab.email and site.data.lab.email != "" %}
+        <a href="mailto:{{ site.data.lab.email }}" class="footer__link">Email</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.data.lab.name }}, {{ site.data.lab.university }}.</p>
+    </div>
+  </div>
+</footer>
