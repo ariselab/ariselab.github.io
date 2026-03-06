@@ -592,77 +592,101 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* =============================================
-   Publications
+   Publications — Dense Table Rows
    ============================================= */
-.pub-year-group { margin-bottom: 48px; }
-
-.pub-year-badge {
-  display: inline-block;
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 20px;
-  padding: 2px 0;
-  border-bottom: 2px solid var(--accent);
-  letter-spacing: -0.02em;
+.pub-table {
+  width: 100%;
 }
 
-.pub-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.pub-table__head {
+  display: grid;
+  grid-template-columns: 64px 1fr 160px 100px;
+  gap: 20px;
+  align-items: center;
+  padding: 0 20px 14px;
+  border-bottom: 1.5px solid var(--border);
+  margin-bottom: 4px;
 }
 
-.pub-card {
-  padding: 20px 24px;
+.pub-table__th {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.pub-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 160px 100px;
+  gap: 20px;
+  align-items: baseline;
+  padding: 18px 20px;
   border-radius: var(--radius-sm);
-  transition: background 0.3s var(--ease);
+  transition: background 0.25s var(--ease);
 }
 
-.pub-card:hover {
+.pub-row:hover {
   background: var(--surface);
   box-shadow: var(--shadow-sm);
 }
 
-.pub-card__award {
+.pub-row__year {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding-top: 2px;
+}
+
+.pub-row__main {
+  min-width: 0;
+}
+
+.pub-row__title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.pub-row__title a { color: var(--text); }
+.pub-row__title a:hover { color: var(--accent); }
+
+.pub-row__authors {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.pub-row__award {
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: var(--accent-warm);
   background: rgba(193, 127, 62, 0.1);
-  padding: 3px 12px;
+  padding: 2px 10px;
   border-radius: 20px;
-  margin-bottom: 8px;
+  margin-top: 6px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-.pub-card__title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.45;
-  margin-bottom: 6px;
-}
-
-.pub-card__title a { color: var(--text); }
-.pub-card__title a:hover { color: var(--accent); }
-
-.pub-card__authors {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  margin-bottom: 3px;
-}
-
-.pub-card__venue {
+.pub-row__venue {
   font-size: 0.82rem;
   color: var(--text-muted);
   font-style: italic;
-  margin-bottom: 10px;
+  line-height: 1.5;
+  padding-top: 2px;
 }
 
-.pub-card__links { display: flex; gap: 8px; }
+.pub-row__links {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  padding-top: 2px;
+}
 
 /* Pill links */
 .pill-link {
@@ -1110,6 +1134,22 @@ img { max-width: 100%; height: auto; display: block; }
   .member-tile__links { justify-content: center; }
 
   .bento-grid--members { grid-template-columns: 1fr; }
+
+  .pub-table__head { display: none; }
+
+  .pub-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 16px;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+  }
+
+  .pub-row:hover { box-shadow: none; }
+
+  .pub-row__venue { font-size: 0.78rem; }
+
+  .pub-row__links { justify-content: flex-start; }
 }
 
 @media (max-width: 480px) {
