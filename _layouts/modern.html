@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.data.lab.name }} - {{ site.data.lab.full_name }}</title>
+  <meta name="description" content="{{ site.data.lab.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/modern.css' | relative_url }}">
+</head>
+<body>
+  {% include modern/nav.html %}
+
+  {{ content }}
+
+  {% include modern/footer.html %}
+
+  <script src="{{ '/assets/js/modern.js' | relative_url }}"></script>
+</body>
+</html>

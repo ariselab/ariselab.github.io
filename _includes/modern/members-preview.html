@@ -1,0 +1,38 @@
+<section class="section members-section" id="members">
+  <div class="container">
+    <h2 class="section-title">Our Team</h2>
+    <div class="members-grid">
+      {% for member in site.data.members.faculty %}
+        <div class="member-card fade-in">
+          <div class="member-photo">
+            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{ member.name }}</h3>
+            <span class="member-role">Faculty</span>
+            {% if member.website %}
+              <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+      {% for member in site.data.members.phd_students %}
+        <div class="member-card fade-in">
+          <div class="member-photo">
+            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{ member.name }}</h3>
+            <span class="member-role">PhD Student</span>
+            {% if member.website %}
+              <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="section-action">
+      <a href="{{ '/members/' | relative_url }}" class="btn btn-outline">View All Members</a>
+    </div>
+  </div>
+</section>

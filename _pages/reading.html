@@ -1,0 +1,39 @@
+---
+layout: modern-page
+title: "Reading Group"
+permalink: /reading/
+---
+
+{% if site.data.reading.size > 0 %}
+  <div class="reading-meta">
+    <p>Our lab reading group meets regularly to discuss recent papers in software engineering, programming languages, and machine learning.</p>
+  </div>
+  <div class="reading-table-wrapper">
+    <table class="reading-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Paper</th>
+          <th>Presenter</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in site.data.reading %}
+          <tr>
+            <td class="reading-date">{{ item.date | date: "%b %d, %Y" }}</td>
+            <td>
+              {% if item.url %}
+                <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+              {% else %}
+                {{ item.title }}
+              {% endif %}
+            </td>
+            <td>{{ item.presenter }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% else %}
+  <p>Reading group schedule coming soon.</p>
+{% endif %}

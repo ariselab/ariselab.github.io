@@ -1,0 +1,37 @@
+<section class="section publications-section" id="publications">
+  <div class="container">
+    <h2 class="section-title">Recent Publications</h2>
+    <div class="publications-list">
+      {% for pub in site.data.publications limit:5 %}
+        <div class="publication-card fade-in">
+          <div class="pub-year">{{ pub.year }}</div>
+          <div class="pub-details">
+            <h3 class="pub-title">
+              {% if pub.paper_url %}
+                <a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+              {% else %}
+                {{ pub.title }}
+              {% endif %}
+            </h3>
+            <p class="pub-authors">{{ pub.authors }}</p>
+            <p class="pub-venue">{{ pub.venue }}</p>
+            {% if pub.award %}
+              <span class="pub-award">{{ pub.award }}</span>
+            {% endif %}
+            <div class="pub-links">
+              {% if pub.paper_url %}
+                <a href="{{ pub.paper_url }}" class="pub-link" target="_blank" rel="noopener">PDF</a>
+              {% endif %}
+              {% if pub.code_url and pub.code_url != "" %}
+                <a href="{{ pub.code_url }}" class="pub-link" target="_blank" rel="noopener">Code</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="section-action">
+      <a href="{{ '/publications/' | relative_url }}" class="btn btn-outline">All Publications</a>
+    </div>
+  </div>
+</section>

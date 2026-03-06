@@ -1,0 +1,15 @@
+{% if site.data.news.size > 0 %}
+<section class="section news-section" id="news">
+  <div class="container">
+    <h2 class="section-title">News</h2>
+    <div class="news-list">
+      {% for item in site.data.news limit:5 %}
+        <div class="news-item fade-in">
+          <time class="news-date">{{ item.date | date: "%b %d, %Y" }}</time>
+          <p class="news-text">{{ item.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -2,38 +2,81 @@
 
 GitHub Pages site for the **ARiSE Lab** (Analytical Research in Software Engineering) at Columbia University.
 
-Built with [Jekyll](https://jekyllrb.com/) and a custom bento-grid / glassmorphism dark theme.
+Built with [Jekyll 4](https://jekyllrb.com/) and a warm editorial design theme.
+
+## Running Locally
+
+### Prerequisites
+
+macOS ships with Ruby 2.6 which is too old. You need **Ruby 3.1+**.
+
+```bash
+# Install Ruby via Homebrew
+brew install ruby
+
+# Add Homebrew Ruby to your PATH — add this line to ~/.zshrc
+export PATH="$(brew --prefix ruby)/bin:$PATH"
+
+# Reload shell
+source ~/.zshrc
+
+# Verify Ruby version (should be 3.x)
+ruby --version
+
+# Install Bundler
+gem install bundler
+
+# Install project dependencies
+bundle install
+```
+
+### Run the dev server
+
+```bash
+bundle exec jekyll serve
+```
+
+Open http://localhost:4000. Jekyll watches for file changes and rebuilds automatically.
+
+### Quick preview (no Ruby/Jekyll required)
+
+```bash
+python3 -m http.server 8234
+```
+
+Open http://localhost:8234. Only the homepage works this way; subpages require Jekyll.
 
 ## Project Structure
 
 ```
-_data/              # All site data (edit these to update content)
-  lab.yml           # Lab name, description, social links
-  members.yml       # Faculty, PhD students, masters, alumni
-  publications.yml  # Papers (title, authors, venue, year, links)
-  projects.yml      # Research projects
-  news.yml          # News/announcements
-  reading.yml       # Reading group schedule and papers
+_data/                 # Site content as YAML (edit these to update)
+  lab.yml              # Lab name, description, social links
+  members.yml          # Faculty, PhD students, masters, alumni
+  publications.yml     # Papers (title, authors, venue, year, links)
+  projects.yml         # Research projects
+  news.yml             # News/announcements
+  reading.yml          # Reading group schedule
+  navigation.yml       # Top navigation links
 
-_layouts/           # Page layouts
-  bento.html        # Main bento-grid layout (dark theme)
+_layouts/              # Page templates
+  modern.html          # Base layout (nav + footer + fonts)
+  modern-page.html     # Inner page layout (title + content)
 
-_includes/bento/    # Reusable components
-  nav.html          # Fixed navigation bar
-  hero.html         # Hero section with mesh gradient
-  overview.html     # Bento grid: about, stats, news, featured pub
-  publications.html # Publications grouped by year
-  members.html      # Team members by role
-  projects.html     # Project cards
-  reading.html      # Reading group table
-  footer.html       # Site footer
+_includes/modern/      # Reusable HTML components
+  nav.html             # Fixed navigation bar
+  hero.html            # Hero section
+  news.html            # News list
+  members-preview.html # Team member cards
+  publications-preview.html  # Recent publications
+  footer.html          # Site footer
 
-_pages/home.html    # Homepage (assembles all sections)
-assets/css/bento.css  # All styles
-assets/js/bento.js    # Scroll animations, glow effects, mobile nav
+_pages/                # Content pages
+assets/css/modern.css  # All styles
+assets/js/modern.js    # Nav scroll, mobile toggle, scroll animations
+index.html             # Homepage (static preview)
 ```
 
-## How to Add/Edit Content
+## Editing Content
 
 All content lives in `_data/*.yml` files. Edit these to update the site — no HTML changes needed.
 
@@ -64,49 +107,12 @@ phd_students:
   text: "Our paper was accepted at ICSE 2026!"
 ```
 
-## Running Locally
-
-### Option 1: Jekyll (full site with Liquid templates)
-
-```bash
-# Install Ruby and Bundler (macOS)
-brew install ruby
-gem install bundler
-
-# Install dependencies
-bundle install
-
-# Serve locally
-bundle exec jekyll serve
-# Open http://localhost:4000
-```
-
-### Option 2: Quick Preview (static HTML, no Jekyll required)
-
-```bash
-# Using npx (Node.js)
-npx serve .
-# Open http://localhost:3000/_preview_bento.html
-
-# Or using Python
-python3 -m http.server 8000
-# Open http://localhost:8000/_preview_bento.html
-```
-
-The `_preview_bento.html` file is a standalone version of the site with hardcoded data, useful for quickly previewing design changes without Jekyll.
-
 ## Design
 
-- **Theme**: Dark, Apple-style bento grid with glassmorphism
-- **Typography**: Syne (display) + Outfit (body) via Google Fonts
-- **Features**: Animated mesh gradient hero, cursor-following glow on cards, scroll-triggered reveal animations, frosted glass cards, responsive mobile layout
-- **Colors**: Deep black background, blue-lavender accent gradient, frosted glass surfaces
-
-## Branches
-
-- `gh-pages` — production site (original academic theme)
-- `feature/bento-redesign` — this experimental dark bento-grid design
-- `feature/modern-redesign` — clean minimal light redesign experiment
+- **Theme**: Warm editorial academic — cream background, refined typography
+- **Typography**: Lora (serif display) + Figtree (sans body) via Google Fonts
+- **Colors**: Cream `#faf8f5` background, wine `#7b2d4e` accent, gold `#b8963e` highlights
+- **Features**: Scroll-triggered fade-in animations, frosted glass navbar, responsive mobile layout
 
 ## Credits
 
