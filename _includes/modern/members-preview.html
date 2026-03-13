@@ -16,17 +16,12 @@
           </div>
         </div>
       {% endfor %}
-      {% for member in site.data.members.phd_students %}
+      {% for member in site.data.members.lab_members %}
         <div class="member-card fade-in">
-          <div class="member-photo">
-            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
-          </div>
+          <div class="member-photo member-photo-placeholder"></div>
           <div class="member-info">
             <h3 class="member-name">{{ member.name }}</h3>
-            <span class="member-role">PhD Student</span>
-            {% if member.website %}
-              <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
-            {% endif %}
+            <span class="member-role">{{ member.role | default: "PhD Student" }}</span>
           </div>
         </div>
       {% endfor %}

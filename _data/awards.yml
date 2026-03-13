@@ -1,0 +1,26 @@
+# Awards grouped by category
+
+- category: "Honors"
+  items:
+    - "IEEE CS TCSE Rising Star Award"
+    - "Most Influential Paper Award, IEEE International Conference on Software Maintenance and Evolution, ICSME 2023"
+    - "VMware Early Career Faculty Award, 2020"
+    - "IBM Faculty Award, 2019"
+    - "NSF CAREER Award, 2019"
+
+- category: "Paper Recognition"
+  items:
+    - "NAACL 2025 (Oral)"
+    - "ACM SIGSOFT Distinguished Paper Award, ISSTA 2023"
+    - "ACM SIGSOFT Distinguished Paper Award, ASE 2023"
+    - "CoRL (Oral Presentation), 2023"
+    - "EAPLS (European Association of Programming Languages and Systems) FASE Best Paper Award, 2020"
+    - "ACM Distinguished Paper Award, FSE 2017"
+    - "ACM Distinguished Paper Award, MSR 2017"
+    - "Best Student Paper Award, S&P (Oakland) 2014"
+
+- category: "Funding"
+  items:
+    - "Govt. Funding: National Science Foundation (NSF)"
+    - "Corporate Funding: Google, IBM, Amazon, Capital One, RedHat"
+    - "Provost's Grants Program for Junior Faculty"

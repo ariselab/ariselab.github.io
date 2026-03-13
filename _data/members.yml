@@ -7,22 +7,14 @@ faculty:
     google_scholar: ""
     github: ""
 
-phd_students:
-  - name: "Saikat Chakraborty"
-    photo: "/images/saikat.png"
-    email: "saikatc@virginia.edu"
-    website: "https://saikatc.info"
-    description: "Saikat is currently working on modeling code change analysis. He is interested in Deep program understanding and comprehension, Natural Language Processing and Structural Learning in Source Code."
-    google_scholar: ""
-    github: ""
-
-  - name: "Yuchi Tian"
-    photo: "/images/yuchi.png"
-    email: "yuchi@virginia.edu"
-    website: "https://yuchi1989.github.io/"
-    description: "He is working on analyzing, testing and evaluating the quality of deep learning based software."
-    google_scholar: ""
-    github: ""
+lab_members:
+  - name: "Yangruibo Ding"
+  - name: "Vikram Nitin"
+  - name: "Ira Ceka"
+  - name: "Jinjun Peng"
+  - name: "Alex Mathai"
+  - name: "Simin Chen"
+    role: "Postdoc"
 
 masters_students: []
 alumni: []

@@ -1,0 +1,35 @@
+# Selected publications grouped by category
+
+- category: "Model Training"
+  papers:
+    - title: "Semcoder: Training code language models with comprehensive semantics reasoning"
+      venue: "NeurIPS 2024"
+    - title: "Cycle: Learning to self-refine the code generation"
+      venue: "OOPSLA 2024"
+    - title: "EditLord: Learning Code Transformation Rules for Code Editing"
+      venue: "ICML 2025"
+
+- category: "Agents"
+  papers:
+    - title: "UTFix: Change aware unit test repairing using LLM"
+      venue: "OOPSLA 2025"
+    - title: "C2SaferRust: Transforming C Projects into Safer Rust with Neuro-Symbolic Techniques"
+    - title: "FaultLine: Automated Proof-of-Vulnerability Generation Using LLM Agents"
+
+- category: "Benchmarking"
+  papers:
+    - title: "Primevul: Vulnerability detection with code language models: How far are we?"
+      venue: "ICSE 2025"
+    - title: "Kgym: A platform and dataset to benchmark large language models on Linux kernel crash resolution"
+      venue: "NeurIPS 2024"
+    - title: "LIBEVOLUTIONEVAL: A Benchmark and Study for Version-Specific Code Generation"
+      venue: "NAACL 2025"
+    - title: "CodeAssistBench (CAB): Dataset & Benchmarking for Multi-turn Chat-Based Code Assistance"
+    - title: "CodeSense: a Real-World Benchmark and Dataset for Code Semantic Reasoning"
+
+- category: "Model Testing"
+  papers:
+    - title: "Dynamic Benchmarking of Reasoning Capabilities in Code Large Language Models Under Data Contamination"
+      venue: "ICML 2025"
+    - title: "DeepTest: Automated Testing of Deep-Neural-Network-driven Autonomous Cars"
+      venue: "ICSE 2018"

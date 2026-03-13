@@ -4,7 +4,16 @@ permalink: /
 title: "Home"
 ---
 
-{% include modern/hero.html %}
-{% include modern/news.html %}
+<div class="hero-news-wrapper">
+  <div class="hero-news-row">
+    <div class="hero-news-left">
+      {% include modern/hero.html %}
+    </div>
+    <div class="hero-news-right">
+      {% include modern/news.html %}
+    </div>
+  </div>
+</div>
 {% include modern/publications-preview.html %}
+{% include modern/awards.html %}
 {% include modern/members-preview.html %}

@@ -5,7 +5,7 @@
     <div class="news-list">
       {% for item in site.data.news limit:5 %}
         <div class="news-item fade-in">
-          <time class="news-date">{{ item.date | date: "%b %d, %Y" }}</time>
+          <time class="news-date">{{ item.date | date: "%b %Y" }}</time>
           <p class="news-text">{{ item.text }}</p>
         </div>
       {% endfor %}
