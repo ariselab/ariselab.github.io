@@ -2,8 +2,8 @@
   <div class="hero-bg"></div>
   <div class="container hero-content">
     <p class="hero-eyebrow">{{ site.data.lab.university }} &middot; {{ site.data.lab.department }}</p>
-    <h1 class="hero-title">{{ site.data.lab.name }}</h1>
-    <p class="hero-subtitle">{{ site.data.lab.full_name }}</p>
+    <h1 style="display: flex; align-items: center; gap: 16px;" class="hero-title">{{ site.data.lab.name }}<img src="{{ '/images/logo_transparent.avif' | relative_url }}" alt="" style="height: 1em; width: auto; filter: brightness(0);"></h1>
+    <p style="font-family: 'Lora', Georgia, serif; font-size: clamp(1.15rem, 2.5vw, 1.5rem); font-weight: 400; font-style: italic; color: #6b6560; margin-bottom: 28px; letter-spacing: 0.01em;">{{ site.data.lab.full_name }}</p>
     <p class="hero-description">{{ site.data.lab.description }}</p>
     {% if site.data.lab.tagline %}
     <p class="hero-tagline">{{ site.data.lab.tagline }}</p>

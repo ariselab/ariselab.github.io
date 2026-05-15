@@ -116,6 +116,7 @@ img {
 .nav-logo-img {
   height: 46px;
   width: auto;
+  filter: brightness(0);
 }
 
 .nav-logo:hover {
@@ -296,6 +297,8 @@ img {
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--color-text);
+}
+
   margin-bottom: 16px;
 }
 
@@ -304,7 +307,8 @@ img {
   font-size: clamp(1.15rem, 2.5vw, 1.5rem);
   font-weight: 400;
   font-style: italic;
-  color: var(--color-text-secondary);
+  color: green;
+  font-size: 3rem !important;
   margin-bottom: 28px;
   letter-spacing: 0.01em;
 }
