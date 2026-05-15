@@ -98,7 +98,12 @@ permalink: /members/
         <div class="member-detail-info">
           <h3>{{ member.name }}</h3>
           {% if member.first_job %}
-            <p class="member-description">First position: {{ member.first_job }}</p>
+            {% assign job_parts = member.first_job | split: ", " %}
+            <p class="member-role">{{ job_parts[0] }}</p>
+            {% if job_parts.size > 1 %}
+              <p class="member-first-job">{{ job_parts | slice: 1, job_parts.size | join: ", " }}</p>
+            {% endif %}
+            <p class="member-first-position-label">(First Position)</p>
           {% endif %}
           <div class="member-meta">
             {% if member.website %}
