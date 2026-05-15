@@ -6,10 +6,10 @@
       venue: "S&P 2026"
       paper_url: "https://arxiv.org/abs/2509.11173"
     - title: "C2SaferRust: Transforming C Projects into Safer Rust with NeuroSymbolic Techniques"
-      venue: "IEEE TSE 2025"
+      venue: "IEEE TSE, 2025"
       paper_url: "https://arxiv.org/abs/2501.14257"
     - title: "FaultLine: Automated Proof-of-Vulnerability Generation Using LLM Agents"
-      venue: "Preprint"
+      venue: "Preprint, 2025"
       paper_url: "https://arxiv.org/abs/2507.15241"
 
 - category: "Model Training"
@@ -26,15 +26,24 @@
 
 - category: "Agents"
   papers:
+    - title: "SWE-Spot: Building Small Repo-Experts with Repository-Centric Learning"
+      venue: "Preprint, 2026"
+      paper_url: "https://arxiv.org/abs/2601.21649"
+    - title: "Understanding APR Agents Through the Lens of Traceability: An Empirical Study"
+      venue: "ISSTA 2026"
+      paper_url: "https://arxiv.org/abs/2506.08311"
     - title: "AppForge: From Assistant to Independent Developer--Are GPTs Ready for Software Development?"
       venue: "ICLR 2025"
       paper_url: "https://arxiv.org/abs/2510.07740"
     - title: "CrashFixer: A crash resolution agent for the Linux kernel"
-      venue: "Preprint"
+      venue: "Preprint, 2025"
       paper_url: "https://arxiv.org/abs/2504.20412"
 
 - category: "Benchmarking"
   papers:
+    - title: "Outrunning LLM Cutoffs: A Live Kernel Crash Resolution Benchmark for All"
+      venue: "ICML 2026"
+      paper_url: "https://arxiv.org/abs/2602.02690"
     - title: "CodeSense: a Real-World Benchmark and Dataset for Code Semantic Reasoning"
       venue: "ICLR 2026"
       paper_url: "https://arxiv.org/abs/2506.00750"

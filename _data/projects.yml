@@ -1,6 +1,6 @@
 # Research themes / ongoing project areas
 
-- title: "AI Software Engineering Agents"
+- title: "AI Software Engineering Agents and Program Repair"
   slug: "ai-agents"
   description: "Building and evaluating autonomous AI agents that can understand, debug, and modify real-world codebases. This includes program repair agents, code editing systems, and benchmarks that measure agent capabilities on tasks like crash resolution and software maintenance."
   status: "active"
@@ -10,12 +10,7 @@
   description: "Developing techniques to detect, analyze, and fix software vulnerabilities using both deep learning and program analysis. Our work spans vulnerability detection with LLMs, red-teaming repair agents for hidden vulnerabilities, and proof-of-vulnerability generation."
   status: "active"
 
-- title: "Code Translation and Transformation"
-  slug: "code-translation"
-  description: "Research on translating code across programming languages, with a focus on safety and correctness. Current efforts include C-to-Rust translation using neurosymbolic techniques, multi-modal specification generation, and understanding the quality and pitfalls of ML-based program translation."
-  status: "active"
-
-- title: "LLM Reasoning and Evaluation for Code"
+- title: "Reasoning and Evaluation for Code and LLMs"
   slug: "llm-reasoning"
   description: "Studying how large language models reason about code and building rigorous benchmarks to evaluate their capabilities. This includes work on semantic reasoning, self-consistency, dynamic evaluation under data contamination, and execution-aware pre-training."
   status: "active"
@@ -23,4 +18,14 @@
 - title: "Trustworthy and Robust AI Systems"
   slug: "trustworthy-ai"
   description: "Investigating the reliability and safety of AI systems used in software engineering. This covers causal deep learning for robustness, compiler-level backdoor attacks on ML models, and frameworks for building trustworthy AI-powered development tools."
+  status: "active"
+
+- title: "Cross-Code and Program Translation"
+  slug: "code-translation"
+  description: "Research on translating code across programming languages, with a focus on safety and correctness. Current efforts include C-to-Rust translation using neurosymbolic techniques, multi-modal specification generation, and understanding the quality and pitfalls of ML-based program translation."
+  status: "active"
+
+- title: "Software Modernization and Migration"
+  slug: "software-modernization"
+  description: "Automating the modernization of legacy software systems, including migrating monolithic applications to microservices, translating code from older languages to modern ones for improved safety, and refactoring software to follow contemporary design patterns and architectures."
   status: "active"
