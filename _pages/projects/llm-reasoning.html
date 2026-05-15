@@ -41,20 +41,22 @@ permalink: /projects/llm-reasoning/
   </div>
 
   <h2>Selected Publications</h2>
-  <div class="project-pubs">
+  <div class="project-pubs" data-collapse="7">
     {% assign papers = site.data.publications | where_exp: "pub", "pub.project contains 'llm-reasoning'" %}
-    {% for pub in papers limit:30 %}
+    {% for pub in papers limit:30 %}{% if pub.year >= 2022 %}
+    {% if pub.paper_url and pub.paper_url != "" %}
+    <a href="{{ pub.paper_url }}" target="_blank" rel="noopener" class="project-pub-item project-pub-item--link">
+    {% else %}
     <div class="project-pub-item">
-      <h3 class="project-pub-item__title">
-        {% if pub.paper_url and pub.paper_url != "" %}
-          <a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
-        {% else %}
-          {{ pub.title }}
-        {% endif %}
-      </h3>
+    {% endif %}
+      <h3 class="project-pub-item__title">{{ pub.title }}</h3>
       <p class="project-pub-item__meta">{{ pub.authors }} &middot; {{ pub.venue }}</p>
+    {% if pub.paper_url and pub.paper_url != "" %}
+    </a>
+    {% else %}
     </div>
-    {% endfor %}
+    {% endif %}
+    {% endif %}{% endfor %}
   </div>
   <a href="{{ '/publications/' | relative_url }}" class="project-pubs__more">View all publications &rarr;</a>
 </div>
