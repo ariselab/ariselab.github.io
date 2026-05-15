@@ -90,7 +90,7 @@ alumni:
     first_job: "Assistant Professor, Hong Kong University of Science & Technology"
     website: "https://cse.hkust.edu.hk/~dongdong/"
   - name: "Ziyuan Zhong"
-    photo: ""
+    photo: "/images/zz.jpeg"
     first_job: "Quantitative Researcher, Squarepoint"
     website: "https://aiasd.github.io/"
   - name: "Saikat Chakraborty"
