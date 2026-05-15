@@ -1,0 +1,52 @@
+---
+layout: modern-page
+title: "Software Modernization and Migration"
+permalink: /projects/software-modernization/
+---
+
+<a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; Back to Projects</a>
+
+<div class="project-hero">
+  <h1 class="project-hero__title">Software Modernization and Migration</h1>
+  <p class="project-hero__subtitle">Automating the modernization of legacy software systems for improved safety, performance, and maintainability.</p>
+</div>
+
+<div class="project-body">
+  <h2>Overview</h2>
+  <p>Legacy software systems power critical infrastructure but often suffer from security vulnerabilities, outdated architectures, and high maintenance costs. Our research develops AI-driven techniques to automate the modernization of these systems, from translating unsafe C code to memory-safe Rust, to decomposing monolithic applications into microservices.</p>
+
+  <h2>Key Directions</h2>
+  <ul>
+    <li><strong>C-to-Rust Translation:</strong> Neurosymbolic techniques that produce safer Rust code from C projects, preserving functionality while gaining memory safety.</li>
+    <li><strong>Microservice Migration:</strong> AI-guided dependency analysis and partition refinement for decomposing monolithic applications into microservice architectures.</li>
+    <li><strong>Translation Quality:</strong> Empirical studies measuring the quality, correctness, and idiomatic nature of machine-translated code.</li>
+    <li><strong>Multi-modal Specifications:</strong> Generating specifications in multiple modalities to guide and validate code translations.</li>
+  </ul>
+
+  <h2>Contributors</h2>
+  <div class="project-contributors">
+    <span>Baishakhi Ray</span>
+    <span>Vikram Nitin</span>
+    <span>Rahul Krishna</span>
+  </div>
+
+  <h2>Selected Publications</h2>
+  <div class="project-pubs" data-collapse="7">
+    {% assign papers = site.data.publications | where_exp: "pub", "pub.project contains 'software-modernization'" %}
+    {% for pub in papers limit:30 %}{% if pub.year >= 2022 %}
+    {% if pub.paper_url and pub.paper_url != "" %}
+    <a href="{{ pub.paper_url }}" target="_blank" rel="noopener" class="project-pub-item project-pub-item--link">
+    {% else %}
+    <div class="project-pub-item">
+    {% endif %}
+      <h3 class="project-pub-item__title">{{ pub.title }}</h3>
+      <p class="project-pub-item__meta">{{ pub.authors }} &middot; {{ pub.venue }}</p>
+    {% if pub.paper_url and pub.paper_url != "" %}
+    </a>
+    {% else %}
+    </div>
+    {% endif %}
+    {% endif %}{% endfor %}
+  </div>
+  <a href="{{ '/publications/' | relative_url }}" class="project-pubs__more">View all publications &rarr;</a>
+</div>

@@ -4,35 +4,54 @@ title: "Publications"
 permalink: /publications/
 ---
 
-{% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+<div class="publications-page">
+<nav class="year-nav" id="year-nav">
+  {% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+  {% for year_group in pubs_by_year %}
+    <a href="#year-{{ year_group.name }}" class="year-nav__item" data-year="{{ year_group.name }}">{{ year_group.name }}</a>
+  {% endfor %}
+</nav>
+<div class="publications-full">
 
 {% for year_group in pubs_by_year %}
-  <h2 class="year-heading">{{ year_group.name }}</h2>
+  <h2 class="year-heading" id="year-{{ year_group.name }}">{{ year_group.name }}</h2>
   <div class="publications-list">
     {% for pub in year_group.items %}
+      {% if pub.paper_url and pub.paper_url != "" %}
+      <a href="{{ pub.paper_url }}" target="_blank" rel="noopener" class="publication-card publication-card--link">
+      {% else %}
       <div class="publication-card">
+      {% endif %}
         <div class="pub-details">
-          <h3 class="pub-title">
-            {% if pub.paper_url %}
-              <a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
-            {% else %}
-              {{ pub.title }}
-            {% endif %}
-          </h3>
+          <h3 class="pub-title">{{ pub.title }}</h3>
           <p class="pub-authors">{{ pub.authors }}</p>
           <p class="pub-venue">{{ pub.venue }}
-            {% if pub.paper_url %}
-              <a href="{{ pub.paper_url }}" class="pub-link" target="_blank" rel="noopener">PDF</a>
-            {% endif %}
-            {% if pub.code_url and pub.code_url != "" %}
-              <a href="{{ pub.code_url }}" class="pub-link" target="_blank" rel="noopener">Code</a>
+            {% if pub.paper_url and pub.paper_url != "" %}
+              <span class="pub-link">PDF</span>
             {% endif %}
           </p>
           {% if pub.award %}
             <span class="pub-award">{{ pub.award }}</span>
           {% endif %}
+          {% if pub.project and pub.project != "" %}
+            <div class="pub-tags">
+              {% assign projects = pub.project | split: ", " %}
+              {% for proj in projects %}
+                {% assign proj_data = site.data.projects | where: "slug", proj | first %}
+                {% if proj_data %}
+                  <span class="pub-tag" data-href="{{ '/projects/' | append: proj | append: '/' | relative_url }}">#{{ proj_data.title }}</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
+      {% if pub.paper_url and pub.paper_url != "" %}
+      </a>
+      {% else %}
       </div>
+      {% endif %}
     {% endfor %}
   </div>
 {% endfor %}
+</div>
+</div>
