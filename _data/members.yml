@@ -106,6 +106,6 @@ alumni:
     first_job: "Research Staff Member, IBM Research"
     website: "http://rkrsn.us/"
   - name: "Chong Tang"
-    photo: ""
+    photo: "/images/ct.png"
     first_job: "Senior Software Engineer, Walmart Labs"
     website: "https://www.linkedin.com/in/chongtang/"
