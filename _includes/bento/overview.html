@@ -1,0 +1,67 @@
+<section class="overview" id="about">
+  <div class="container">
+    <div class="bento-grid bento-grid--overview">
+      <!-- About card (large) -->
+      <div class="bento-card bento-card--about reveal">
+        <div class="bento-card__glow"></div>
+        <span class="bento-card__label">About</span>
+        <h2 class="bento-card__title">{{ site.data.lab.description }}</h2>
+        <div class="bento-card__meta">
+          <span>{{ site.data.lab.location }}</span>
+        </div>
+      </div>
+
+      <!-- Stats card -->
+      <div class="bento-card bento-card--stats reveal" style="animation-delay: 0.1s">
+        <div class="bento-card__glow"></div>
+        <div class="stat-grid">
+          <div class="stat">
+            <span class="stat__number">{{ site.data.publications | size }}</span>
+            <span class="stat__label">Publications</span>
+          </div>
+          <div class="stat">
+            {% assign member_count = 0 %}
+            {% if site.data.members.faculty %}{% assign member_count = member_count | plus: site.data.members.faculty.size %}{% endif %}
+            {% if site.data.members.phd_students %}{% assign member_count = member_count | plus: site.data.members.phd_students.size %}{% endif %}
+            {% if site.data.members.masters_students %}{% assign member_count = member_count | plus: site.data.members.masters_students.size %}{% endif %}
+            <span class="stat__number">{{ member_count }}</span>
+            <span class="stat__label">Members</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number">{{ site.data.projects | size }}</span>
+            <span class="stat__label">Projects</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- News card -->
+      <div class="bento-card bento-card--news reveal" style="animation-delay: 0.2s">
+        <div class="bento-card__glow"></div>
+        <span class="bento-card__label">Latest News</span>
+        <div class="news-feed">
+          {% for item in site.data.news limit:4 %}
+          <div class="news-feed__item">
+            <time class="news-feed__date">{{ item.date | date: "%b %Y" }}</time>
+            <p class="news-feed__text">{{ item.text }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Featured pub card -->
+      <div class="bento-card bento-card--featured-pub reveal" style="animation-delay: 0.3s">
+        <div class="bento-card__glow"></div>
+        <span class="bento-card__label">Latest Publication</span>
+        {% assign latest = site.data.publications | first %}
+        {% if latest %}
+        <h3 class="bento-card__pub-title">{{ latest.title }}</h3>
+        <p class="bento-card__pub-authors">{{ latest.authors }}</p>
+        <p class="bento-card__pub-venue">{{ latest.venue }}, {{ latest.year }}</p>
+        {% if latest.paper_url != "" %}
+        <a href="{{ latest.paper_url }}" class="bento-card__pub-link">Read Paper &rarr;</a>
+        {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

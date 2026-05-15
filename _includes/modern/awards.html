@@ -1,0 +1,19 @@
+{% if site.data.awards.size > 0 %}
+<section class="section awards-section" id="awards">
+  <div class="container">
+    <h2 class="section-title">Awards</h2>
+    <div class="awards-grid">
+      {% for group in site.data.awards %}
+        <div class="awards-category fade-in">
+          <h3 class="awards-category-title">{{ group.category }}</h3>
+          <ul class="awards-list">
+            {% for item in group.items %}
+              <li class="award-item">{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

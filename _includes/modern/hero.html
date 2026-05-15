@@ -1,0 +1,12 @@
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <p class="hero-eyebrow">{{ site.data.lab.university }} &middot; {{ site.data.lab.department }}</p>
+    <h1 class="hero-title">{{ site.data.lab.name }}</h1>
+    <p class="hero-subtitle">{{ site.data.lab.full_name }}</p>
+    <p class="hero-description">{{ site.data.lab.description }}</p>
+    {% if site.data.lab.tagline %}
+    <p class="hero-tagline">{{ site.data.lab.tagline }}</p>
+    {% endif %}
+  </div>
+</section>

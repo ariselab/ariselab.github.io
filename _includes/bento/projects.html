@@ -1,0 +1,34 @@
+<section class="section section--projects" id="projects">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Work</span>
+      <h2 class="section__title">Projects</h2>
+    </div>
+
+    <div class="bento-grid bento-grid--projects">
+      {% for project in site.data.projects %}
+      <div class="project-tile reveal">
+        <div class="project-tile__glow"></div>
+        {% if project.image and project.image != "" %}
+        <div class="project-tile__image">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
+        </div>
+        {% endif %}
+        <div class="project-tile__body">
+          <div class="project-tile__status project-tile__status--{{ project.status }}">{{ project.status }}</div>
+          <h3 class="project-tile__title">{{ project.title }}</h3>
+          <p class="project-tile__desc">{{ project.description }}</p>
+          <div class="project-tile__links">
+            {% if project.website and project.website != "" %}
+            <a href="{{ project.website }}" class="pill-link">Website</a>
+            {% endif %}
+            {% if project.github and project.github != "" %}
+            <a href="{{ project.github }}" class="pill-link">GitHub</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

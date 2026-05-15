@@ -1,0 +1,18 @@
+<nav class="nav" id="site-nav">
+  <div class="nav__inner">
+    <a href="{{ '/' | relative_url }}" class="nav__logo">
+      <span class="nav__logo-icon">A</span>
+      <span class="nav__logo-text">{{ site.data.lab.name }}</span>
+    </a>
+    <div class="nav__links" id="nav-links">
+      <a href="#about" class="nav__link">About</a>
+      <a href="#publications" class="nav__link">Publications</a>
+      <a href="#members" class="nav__link">People</a>
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#reading" class="nav__link">Reading</a>
+    </div>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

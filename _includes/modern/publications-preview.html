@@ -1,0 +1,21 @@
+<section class="section publications-section" id="publications">
+  <div class="container">
+    <h2 class="section-title">Selected Publications</h2>
+    {% for group in site.data.selected_publications %}
+      <div class="pub-category fade-in">
+        <h3 class="pub-category-title">{{ group.category }}</h3>
+        <div class="publications-list">
+          {% for pub in group.papers %}
+            <div class="publication-card">
+              <span class="pub-title">{% if pub.paper_url and pub.paper_url != "" %}<a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</span>
+              {% if pub.venue %}<span class="pub-venue">({{ pub.venue }})</span>{% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+    <div class="section-action">
+      <a href="{{ '/publications/' | relative_url }}" class="btn btn-outline">All Publications</a>
+    </div>
+  </div>
+</section>
