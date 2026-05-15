@@ -1,26 +1,760 @@
 # Add publications here, newest first.
-# Fields: title, authors, venue, year, paper_url (optional), code_url (optional), award (optional)
+# Fields: title, authors, venue, year, paper_url (optional), code_url (optional), award (optional), project (optional)
 
-- title: "Paper Title Number 3"
-  authors: "Author One, Author Two, Author Three"
-  venue: "Journal 3"
-  year: 2015
-  paper_url: "http://academicpages.github.io/files/paper3.pdf"
+# ── 2026 ──
+
+- title: "Trustworthy AI Software Engineers"
+  authors: "A Aleti, B Ray, R Hoda, S Chen"
+  venue: "Preprint"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2602.06310"
   code_url: ""
   award: ""
+  project: "trustworthy-ai"
 
-- title: "Paper Title Number 2"
-  authors: "Author One, Author Two"
-  venue: "Journal 2"
-  year: 2010
-  paper_url: "http://academicpages.github.io/files/paper2.pdf"
+- title: "Outrunning LLM Cutoffs: A Live Kernel Crash Resolution Benchmark for All"
+  authors: "C Huang, A Mathai, F Yu, A Nogikh, P Maniatis, F Ivančić, E Wu, K Kaffes, J Yang, B Ray"
+  venue: "ICML 2026"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2602.02690"
   code_url: ""
   award: ""
+  project: "ai-agents"
 
-- title: "Paper Title Number 1"
-  authors: "Author One"
-  venue: "Journal 1"
-  year: 2009
-  paper_url: "http://academicpages.github.io/files/paper1.pdf"
+- title: "Code Quality Analysis of Translations from C to Rust"
+  authors: "B Tadesse, V Nitin, M Salah, B Ray, M d'Amorim, W Assunção"
+  venue: "Preprint"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2602.00840"
   code_url: ""
   award: ""
+  project: "code-translation"
+
+- title: "SWE-Spot: Building Small Repo-Experts with Repository-Centric Learning"
+  authors: "J Peng, M Saebo, T Zhong, YJ Cheng, J Yang, B Ray, S Chen, Y Ding"
+  venue: "Preprint"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2601.21649"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "Your compiler is backdooring your model: Understanding and exploiting compilation inconsistency vulnerabilities in deep learning compilers"
+  authors: "S Chen, J Peng, Y He, J Yang, B Ray"
+  venue: "IEEE Symposium on Security and Privacy (S&P) 2026"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2509.11173"
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "CodeSense: a Real-World Benchmark and Dataset for Code Semantic Reasoning"
+  authors: "MK Roy, S Chen, B Steenhoek, J Peng, G Kaiser, B Ray, W Le"
+  venue: "ICLR 2026"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2506.00750"
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Understanding APR Agents Through the Lens of Traceability: An Empirical Study"
+  authors: "I Ceka*, H Mitchell*, S Pujar, L Buratti, S Ramji, J Yang, G Kaiser, B Ray"
+  venue: "ISSTA 2026"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2506.08311"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+# ── 2025 ──
+
+- title: "C2SaferRust: Transforming C Projects into Safer Rust with NeuroSymbolic Techniques"
+  authors: "V Nitin, R Krishna, L Lemos do Valle, B Ray"
+  venue: "IEEE Transactions on Software Engineering"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2501.14257"
+  code_url: ""
+  award: ""
+  project: "code-translation"
+
+- title: "Benchmarking large language models under data contamination: A survey from static to dynamic evaluation"
+  authors: "S Chen, Y Chen, Z Li, Y Jiang, Z Wan, Y He, D Ran, T Gu, H Li, T Xie"
+  venue: "EMNLP 2025"
+  year: 2025
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Mechanics of Learned Reasoning 1: TempoBench, A Benchmark for Interpretable Deconstruction of Reasoning System Performance"
+  authors: "N Holzer, W Fishell, B Ray, M Santolucito"
+  venue: "Preprint"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2510.27544"
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "AppForge: From Assistant to Independent Developer--Are GPTs Ready for Software Development?"
+  authors: "D Ran, Y Cao, M Wu, S Chen, Y Guo, J Ren, Z Song, H Yu, J Wei, L Li, W Yang, B Ray, T Xie"
+  venue: "ICLR 2025"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2510.07740"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "REFINE: Enhancing Program Repair Agents through Context-Aware Patch Refinement"
+  authors: "A Pabba, S Chen, A Mathai, A Chakraborty, B Ray"
+  venue: "Preprint"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2510.03588"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "Red Teaming Program Repair Agents: When Correct Patches can Hide Vulnerabilities"
+  authors: "S Chen, Y He, S Jana, B Ray"
+  venue: "Preprint"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2509.25894"
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "FaultLine: Automated proof-of-vulnerability generation using LLM agents"
+  authors: "V Nitin, B Ray, RZ Moghaddam"
+  venue: "Preprint"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2507.15241"
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Code Reasoning for Software Engineering Tasks: A Survey and A Call to Action"
+  authors: "S Pujar, I Ceka, I Manotas, G Kaiser, B Ray, S Ramji"
+  venue: "Preprint"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2506.13932"
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "CWEval: Outcome-driven Evaluation on Functionality and Security of LLM Code Generation"
+  authors: "J Peng, L Cui, K Huang, J Yang, B Ray"
+  venue: "2025 IEEE/ACM International Workshop on Large Language Models for Code"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2501.08200"
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "CrashFixer: A crash resolution agent for the Linux kernel"
+  authors: "A Mathai, C Huang, S Ma, J Kim, H Mitchell, A Nogikh, P Maniatis"
+  venue: "Preprint"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2504.20412"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "EditLord: Learning Code Transformation Rules for Code Editing"
+  authors: "W Li, A Jan, B Ray, J Yang, C Mao, K Pei"
+  venue: "ICML 2025"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2504.15284"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "DyCodeEval: Dynamic Benchmarking of Reasoning Capabilities in Code Large Language Models Under Data Contamination"
+  authors: "S Chen, P Pusarla, B Ray"
+  venue: "ICML 2025"
+  year: 2025
+  paper_url: "https://arxiv.org/abs/2503.04149"
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+# ── 2024 ──
+
+- title: "Semcoder: Training code language models with comprehensive semantics reasoning"
+  authors: "Y Ding, J Peng, MJ Min, G Kaiser, J Yang, B Ray"
+  venue: "Advances in Neural Information Processing Systems 37, 60275-60308"
+  year: 2024
+  paper_url: "https://arxiv.org/abs/2406.01006"
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Can LLM prompting serve as a proxy for static analysis in vulnerability detection"
+  authors: "I Ceka, F Qiao, A Dey, A Valecha, G Kaiser, B Ray"
+  venue: "Preprint"
+  year: 2024
+  paper_url: "https://arxiv.org/abs/2412.12039"
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Kgym: A platform and dataset to benchmark large language models on Linux kernel crash resolution"
+  authors: "A Mathai, C Huang, P Maniatis, A Nogikh, F Ivančić, J Yang, B Ray"
+  venue: "Advances in Neural Information Processing Systems 37, 78053-78078"
+  year: 2024
+  paper_url: "https://arxiv.org/abs/2407.02680"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "Comment on Revisiting Neural Program Smoothing for Fuzzing"
+  authors: "D She, K Pei, J Yang, B Ray, S Jana"
+  venue: "Preprint"
+  year: 2024
+  paper_url: "https://arxiv.org/abs/2409.04504"
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Yuga: Automatically Detecting Lifetime Annotation Bugs in the Rust Language"
+  authors: "V Nitin, A Mulhern, S Arora, B Ray"
+  venue: "IEEE Transactions on Software Engineering 50(10), 2602-2613"
+  year: 2024
+  paper_url: "http://dx.doi.org/10.1109/TSE.2024.3447671"
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Spectra: Enhancing the code translation ability of language models by generating multi-modal specifications"
+  authors: "V Nitin, R Krishna, B Ray"
+  venue: "Preprint"
+  year: 2024
+  paper_url: "https://arxiv.org/abs/2405.18574"
+  code_url: ""
+  award: ""
+  project: "code-translation"
+
+- title: "Cycle: Learning to self-refine the code generation"
+  authors: "Y Ding, MJ Min, G Kaiser, B Ray"
+  venue: "Proceedings of the ACM on Programming Languages 8 (OOPSLA1), 392-418"
+  year: 2024
+  paper_url: "https://arxiv.org/abs/2403.18746"
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Automated Code Editing with Search-Generate-Modify"
+  authors: "C Liu, P Cetin, Y Patodia, S Chakraborty, Y Ding, B Ray"
+  venue: "ICSE 2024"
+  year: 2024
+  paper_url: "https://arxiv.org/abs/2306.06490"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "Towards causal deep learning for vulnerability detection"
+  authors: "MM Rahman, I Ceka, C Mao, S Chakraborty, B Ray, W Le"
+  venue: "ICSE 2024"
+  year: 2024
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Vulnerability detection with code language models: How far are we?"
+  authors: "Y Ding, Y Fu, O Ibrahim, C Sitawarin, X Chen, B Alomair, D Wagner"
+  venue: "Preprint"
+  year: 2024
+  paper_url: "https://arxiv.org/abs/2403.18624"
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "TRACED: Execution-aware Pre-training for Source Code"
+  authors: "Y Ding, B Steenhoek, K Pei, G Kaiser, W Le, B Ray"
+  venue: "ICSE 2024"
+  year: 2024
+  paper_url: "https://arxiv.org/abs/2306.07487"
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+# ── 2023 ──
+
+- title: "Language-guided traffic simulation via scene-level diffusion"
+  authors: "Z Zhong, D Rempe, Y Chen, B Ivanovic, Y Cao, D Xu, M Pavone, B Ray"
+  venue: "Conference on Robot Learning, 144-177"
+  year: 2023
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Guided conditional diffusion for controllable traffic simulation"
+  authors: "Z Zhong, D Rempe, D Xu, Y Chen, S Veer, T Che, B Ray, M Pavone"
+  venue: "ICRA 2023, 3560-3566"
+  year: 2023
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "On ML-based program translation: perils and promises"
+  authors: "A Malyala, K Zhou, B Ray, S Chakraborty"
+  venue: "ICSE 2023"
+  year: 2023
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-translation"
+
+- title: "Summarize and generate to back-translate: Unsupervised translation of programming languages"
+  authors: "W Ahmad, S Chakraborty, B Ray, KW Chang"
+  venue: "EACL 2023"
+  year: 2023
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-translation"
+
+- title: "Tracefixer: Execution trace-driven program repair"
+  authors: "I Bouzenia, Y Ding, K Pei, B Ray, M Pradel"
+  venue: "Preprint"
+  year: 2023
+  paper_url: "https://arxiv.org/abs/2304.12743"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "Beyond accuracy: Evaluating self-consistency of code LLMs with IdentityChain"
+  authors: "MJ Min, Y Ding, L Buratti, S Pujar, G Kaiser, S Jana, B Ray"
+  venue: "ICLR 2023"
+  year: 2023
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Concord: Clone-aware contrastive learning for source code"
+  authors: "Y Ding, S Chakraborty, L Buratti, S Pujar, A Morari, G Kaiser, B Ray"
+  venue: "FSE 2023"
+  year: 2023
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "A static evaluation of code completion by large language models"
+  authors: "H Ding, V Kumar, Y Tian, Z Wang, R Kwiatkowski, X Li, MK Ramanathan"
+  venue: "ACL 2023"
+  year: 2023
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Cameo: A causal transfer learning approach for performance optimization of configurable computer systems"
+  authors: "MS Iqbal, Z Zhong, I Ahmad, B Ray, P Jamshidi"
+  venue: "ACM Symposium on Cloud Computing 2023, 555-571"
+  year: 2023
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+# ── 2022 ──
+
+- title: "Learning approximate execution semantics from traces for binary function similarity"
+  authors: "K Pei, Z Xuan, J Yang, S Jana, B Ray"
+  venue: "IEEE Transactions on Software Engineering 49(4), 2776-2790"
+  year: 2022
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Natgen: generative pre-training by 'naturalizing' source code"
+  authors: "S Chakraborty, T Ahmed, Y Ding, PT Devanbu, B Ray"
+  venue: "ESEC/FSE 2022"
+  year: 2022
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "NeuDep: neural binary memory dependence analysis"
+  authors: "K Pei, D She, M Wang, S Geng, Z Xuan, Y David, J Yang, S Jana, B Ray"
+  venue: "ESEC/FSE 2022"
+  year: 2022
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Multi-lingual evaluation of code generation models"
+  authors: "B Athiwaratkun, SK Gouda, Z Wang, X Li, Y Tian, M Tan, WU Ahmad"
+  venue: "Preprint"
+  year: 2022
+  paper_url: "https://arxiv.org/abs/2210.14868"
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Cargo: AI-guided dependency analysis for migrating monolithic applications to microservices architecture"
+  authors: "V Nitin, S Asthana, B Ray, R Krishna"
+  venue: "ASE 2022"
+  year: 2022
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "Neural network guided evolutionary fuzzing for finding traffic violations of autonomous vehicles"
+  authors: "Z Zhong, G Kaiser, B Ray"
+  venue: "IEEE Transactions on Software Engineering 49(4), 1860-1875"
+  year: 2022
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Detecting multi-sensor fusion errors in advanced driver-assistance systems"
+  authors: "Z Zhong, Z Hu, S Guo, X Zhang, Z Zhong, B Ray"
+  venue: "FSE 2022"
+  year: 2022
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Automatic map generation for autonomous driving system testing"
+  authors: "Y Tang, Y Zhou, K Yang, Z Zhong, B Ray, Y Liu, P Zhang, J Chen"
+  venue: "Preprint"
+  year: 2022
+  paper_url: "https://arxiv.org/abs/2206.09357"
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Unicorn: Reasoning about configurable system performance through the lens of causality"
+  authors: "MS Iqbal, R Krishna, MA Javidian, B Ray, P Jamshidi"
+  venue: "EuroSys 2022, 199-217"
+  year: 2022
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Repairing Group-Level Errors for DNNs Using Weighted Regularization"
+  authors: "Z Zhong, Y Tian, CJ Sweeney, V Ordonez, B Ray"
+  venue: "Preprint"
+  year: 2022
+  paper_url: "https://arxiv.org/abs/2203.13612"
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "VELVET: a noVel Ensemble Learning approach to automatically locate VulnErable sTatements"
+  authors: "Y Ding, S Suneja, Y Zheng, J Laredo, A Morari, G Kaiser, B Ray"
+  venue: "SANER 2022"
+  year: 2022
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+# ── 2021 ──
+
+- title: "A survey on scenario-based testing for automated driving systems in high-fidelity simulation"
+  authors: "Z Zhong, Y Tang, Y Zhou, VO Neves, Y Liu, B Ray"
+  venue: "Preprint"
+  year: 2021
+  paper_url: "https://arxiv.org/abs/2112.00964"
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "On multi-modal learning of editing source code"
+  authors: "S Chakraborty, B Ray"
+  venue: "ASE 2021"
+  year: 2021
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "Retrieval augmented code generation and summarization"
+  authors: "MR Parvez, W Ahmad, S Chakraborty, B Ray, KW Chang"
+  venue: "Findings of EMNLP 2021, 2719-2734"
+  year: 2021
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Stateformer: Fine-grained type recovery from binaries using generative state modeling"
+  authors: "K Pei, J Guan, M Broughton, Z Chen, S Yao, D Williams-King"
+  venue: "ESEC/FSE 2021"
+  year: 2021
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Direct: A transformer-based model for decompiled variable name recovery"
+  authors: "V Nitin, A Saieva, B Ray, G Kaiser"
+  venue: "NLP4Prog 2021"
+  year: 2021
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-translation"
+
+- title: "Deep learning based vulnerability detection: Are we there yet?"
+  authors: "S Chakraborty, R Krishna, Y Ding, B Ray"
+  venue: "IEEE Transactions on Software Engineering 48(9), 3280-3296"
+  year: 2021
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Understanding local robustness of deep neural networks under natural variations"
+  authors: "Z Zhong, Y Tian, B Ray"
+  venue: "FASE 2021"
+  year: 2021
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Unified pre-training for program understanding and generation"
+  authors: "WU Ahmad, S Chakraborty, B Ray, KW Chang"
+  venue: "NAACL 2021"
+  year: 2021
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "CADET: Debugging and fixing misconfigurations using counterfactual reasoning"
+  authors: "MS Iqbal, R Krishna, MA Javidian, B Ray, P Jamshidi"
+  venue: "Preprint"
+  year: 2021
+  paper_url: "https://arxiv.org/abs/2010.06061"
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Towards Learning (Dis)-Similarity of Source Code from Program Contrasts"
+  authors: "Y Ding, L Buratti, S Pujar, A Morari"
+  venue: "ACL 2021"
+  year: 2021
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+# ── 2020 ──
+
+- title: "Patching as translation: the data and the metaphor"
+  authors: "Y Ding, B Ray, P Devanbu, VJ Hellendoorn"
+  venue: "ASE 2020"
+  year: 2020
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "Repairing confusion and bias errors for DNN-based image classifiers"
+  authors: "Y Tian"
+  venue: "ESEC/FSE 2020"
+  year: 2020
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "MTFuzz: fuzzing with a multi-task neural network"
+  authors: "D She, R Krishna, L Yan, S Jana, B Ray"
+  venue: "ESEC/FSE 2020"
+  year: 2020
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Codit: Code editing with tree-based neural models"
+  authors: "S Chakraborty, Y Ding, M Allamanis, B Ray"
+  venue: "IEEE Transactions on Software Engineering 48(4), 1385-1399"
+  year: 2020
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
+- title: "Multitask learning strengthens adversarial robustness"
+  authors: "C Mao, A Gupta, V Nitin, B Ray, S Song, J Yang, C Vondrick"
+  venue: "ECCV 2020, 158-174"
+  year: 2020
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "ConEx: Efficient exploration of big-data system configurations for better performance"
+  authors: "R Krishna, C Tang, K Sullivan, B Ray"
+  venue: "IEEE Transactions on Software Engineering 48(3), 893-909"
+  year: 2020
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "A transformer-based approach for source code summarization"
+  authors: "W Ahmad, S Chakraborty, B Ray, KW Chang"
+  venue: "ACL 2020"
+  year: 2020
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Testing DNN image classifiers for confusion & bias errors"
+  authors: "Y Tian, Z Zhong, V Ordonez, G Kaiser, B Ray"
+  venue: "ICSE 2020"
+  year: 2020
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Neutaint: Efficient dynamic taint analysis with neural networks"
+  authors: "D She, Y Chen, A Shah, B Ray, S Jana"
+  venue: "IEEE Symposium on Security and Privacy 2020, 1527-1543"
+  year: 2020
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+# ── 2019 ──
+
+- title: "Metric learning for adversarial robustness"
+  authors: "C Mao, Z Zhong, J Yang, C Vondrick, B Ray"
+  venue: "NeurIPS 2019"
+  year: 2019
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Bringing engineering rigor to Deep Learning"
+  authors: "K Pei, S Wang, Y Tian, J Whitehouse, C Vondrick, Y Cao, B Ray, S Jana"
+  venue: "ACM SIGOPS Operating Systems Review 53(1), 59-67"
+  year: 2019
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Neuzz: Efficient fuzzing with neural program smoothing"
+  authors: "D She, K Pei, D Epstein, J Yang, B Ray, S Jana"
+  venue: "IEEE Symposium on Security and Privacy 2019, 803-817"
+  year: 2019
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Toward optimal selection of information retrieval models for software engineering tasks"
+  authors: "MM Rahman, S Chakraborty, G Kaiser, B Ray"
+  venue: "SCAM 2019"
+  year: 2019
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+# ── 2018 ──
+
+- title: "Building language models for text with named entities"
+  authors: "MR Parvez, S Chakraborty, B Ray, KW Chang"
+  venue: "ACL 2018"
+  year: 2018
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "DeepTest: Automated testing of deep-neural-network-driven autonomous cars"
+  authors: "Y Tian, K Pei, S Jana, B Ray"
+  venue: "ICSE 2018"
+  year: 2018
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Searching for high-performing software configurations with metaheuristic algorithms"
+  authors: "C Tang, K Sullivan, B Ray"
+  venue: "ICSE 2018"
+  year: 2018
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Which similarity metric to use for software documents? A study on information retrieval based software engineering tasks"
+  authors: "MM Rahman, S Chakraborty, B Ray"
+  venue: "ICSE 2018"
+  year: 2018
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+- title: "Entropy guided spectrum based bug localization using statistical language model"
+  authors: "S Chakraborty, Y Li, M Irvine, R Saha, B Ray"
+  venue: "Preprint"
+  year: 2018
+  paper_url: "https://arxiv.org/abs/1802.06947"
+  code_url: ""
+  award: ""
+  project: "code-security"
+
+- title: "Tree2tree neural translation model for learning source code changes"
+  authors: "S Chakraborty, M Allamanis, B Ray"
+  venue: "Preprint"
+  year: 2018
+  paper_url: "https://arxiv.org/abs/1810.00314"
+  code_url: ""
+  award: ""
+  project: "code-translation"
+
+- title: "A case study on the impact of similarity measure on information retrieval based software engineering tasks"
+  authors: "MM Rahman, S Chakraborty, G Kaiser, B Ray"
+  venue: "Preprint"
+  year: 2018
+  paper_url: "https://arxiv.org/abs/1808.02911"
+  code_url: ""
+  award: ""
+  project: "llm-reasoning"
+
+# ── 2017 ──
+
+- title: "Interpreted formalisms for configurations"
+  authors: "C Tang, K Sullivan, J Xiang, T Weiss, B Ray"
+  venue: "Preprint"
+  year: 2017
+  paper_url: "https://arxiv.org/abs/1712.04982"
+  code_url: ""
+  award: ""
+  project: "trustworthy-ai"
+
+- title: "Automatically diagnosing and repairing error handling bugs in C"
+  authors: "Y Tian, B Ray"
+  venue: "ESEC/FSE 2017"
+  year: 2017
+  paper_url: ""
+  code_url: ""
+  award: ""
+  project: "ai-agents"

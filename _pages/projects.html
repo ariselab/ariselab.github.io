@@ -4,33 +4,17 @@ title: "Projects"
 permalink: /projects/
 ---
 
-{% if site.data.projects.size > 0 %}
-  <div class="projects-grid">
-    {% for project in site.data.projects %}
-      <div class="project-card">
-        {% if project.image and project.image != "" %}
-          <div class="project-image">
-            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
-          </div>
+<div class="projects-grid">
+  {% for project in site.data.projects %}
+    <a href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}" class="project-card fade-in">
+      <div class="project-card__header">
+        <h2 class="project-card__title">{{ project.title }}</h2>
+        {% if project.status == "active" %}
+          <span class="project-card__status">Active</span>
         {% endif %}
-        <div class="project-info">
-          {% if project.status %}
-            <span class="project-status project-status--{{ project.status }}">{{ project.status }}</span>
-          {% endif %}
-          <h3 class="project-title">{{ project.title }}</h3>
-          <p class="project-description">{{ project.description }}</p>
-          <div class="project-links">
-            {% if project.website and project.website != "" %}
-              <a href="{{ project.website }}" class="pub-link" target="_blank" rel="noopener">Website</a>
-            {% endif %}
-            {% if project.github and project.github != "" %}
-              <a href="{{ project.github }}" class="pub-link" target="_blank" rel="noopener">Code</a>
-            {% endif %}
-          </div>
-        </div>
       </div>
-    {% endfor %}
-  </div>
-{% else %}
-  <p>Projects coming soon.</p>
-{% endif %}
+      <p class="project-card__desc">{{ project.description }}</p>
+      <span class="project-card__cta">View papers &rarr;</span>
+    </a>
+  {% endfor %}
+</div>

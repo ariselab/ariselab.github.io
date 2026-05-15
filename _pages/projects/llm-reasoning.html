@@ -1,0 +1,56 @@
+---
+layout: modern-page
+title: "LLM Reasoning and Evaluation for Code"
+permalink: /projects/llm-reasoning/
+---
+
+<a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; Back to Projects</a>
+
+<div class="project-hero">
+  <h1 class="project-hero__title">LLM Reasoning and Evaluation for Code</h1>
+  <p class="project-hero__subtitle">Understanding how large language models reason about code, and building rigorous benchmarks to evaluate them.</p>
+</div>
+
+<div class="project-body">
+  <h2>Overview</h2>
+  <p>As LLMs become central to software development workflows, understanding what they actually learn about code and how reliably they perform is critical. Our research builds benchmarks, training methods, and evaluation frameworks that move beyond surface-level accuracy to probe deeper code understanding.</p>
+  <p>We study semantic reasoning, self-consistency, execution awareness, and the impact of data contamination on benchmark validity.</p>
+
+  <h2>Key Directions</h2>
+  <ul>
+    <li><strong>Semantic Reasoning</strong> &mdash; Benchmarks and models that test whether LLMs understand code semantics, not just syntax, including execution-aware pre-training.</li>
+    <li><strong>Self-Consistency</strong> &mdash; Evaluating whether code LLMs produce internally consistent outputs across equivalent formulations of the same problem.</li>
+    <li><strong>Dynamic Evaluation</strong> &mdash; Combating data contamination with dynamic benchmarking approaches that generate fresh evaluation instances.</li>
+    <li><strong>Code Representations</strong> &mdash; Contrastive learning and pre-training strategies that build better representations of source code.</li>
+  </ul>
+
+  <h2>Impact</h2>
+  <p>SemCoder introduced comprehensive semantics reasoning into code LLM training, achieving state-of-the-art results at NeurIPS 2024. IdentityChain established self-consistency as a key evaluation dimension for code models. Our work on data contamination has influenced how the community designs and trusts code benchmarks.</p>
+
+  <h2>Contributors</h2>
+  <div class="project-contributors">
+    <span>Baishakhi Ray</span>
+    <span>Simin Chen</span>
+    <span>Jinjun Peng</span>
+    <span>Ira Ceka</span>
+    <span>Nikolaus Holzer</span>
+  </div>
+
+  <h2>Selected Publications</h2>
+  <div class="project-pubs">
+    {% assign papers = site.data.publications | where: "project", "llm-reasoning" %}
+    {% for pub in papers limit:6 %}
+    <div class="project-pub-item">
+      <h3 class="project-pub-item__title">
+        {% if pub.paper_url and pub.paper_url != "" %}
+          <a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+        {% else %}
+          {{ pub.title }}
+        {% endif %}
+      </h3>
+      <p class="project-pub-item__meta">{{ pub.authors }} &middot; {{ pub.venue }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="{{ '/publications/' | relative_url }}" class="project-pubs__more">View all publications &rarr;</a>
+</div>

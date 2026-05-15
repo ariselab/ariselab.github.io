@@ -1,0 +1,60 @@
+---
+layout: modern-page
+title: "AI Software Engineering Agents"
+permalink: /projects/ai-agents/
+---
+
+<a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; Back to Projects</a>
+
+<div class="project-hero">
+  <h1 class="project-hero__title">AI Software Engineering Agents</h1>
+  <p class="project-hero__subtitle">Building autonomous agents that understand, debug, and modify real-world codebases.</p>
+</div>
+
+<div class="project-body">
+  <h2>Overview</h2>
+  <p>Software engineering is increasingly complex, with modern codebases spanning millions of lines of code across interconnected systems. Our research develops AI agents that can autonomously navigate these codebases, understand program semantics, and perform meaningful engineering tasks such as bug repair, code editing, and crash resolution.</p>
+  <p>We focus on building agents that work on real-world software, not toy benchmarks, tackling challenges like Linux kernel crash resolution and large-scale repository maintenance.</p>
+
+  <h2>Key Directions</h2>
+  <ul>
+    <li><strong>Crash Resolution</strong> &mdash; End-to-end agents that diagnose and patch real kernel crashes, combining LLM reasoning with execution feedback loops.</li>
+    <li><strong>Code Editing &amp; Repair</strong> &mdash; Systems that learn transformation rules and apply context-aware refinements to generate correct patches.</li>
+    <li><strong>Agent Evaluation</strong> &mdash; Empirical studies of how SE agents work in practice, including traceability analysis and benchmarks that measure agent capabilities on realistic tasks.</li>
+    <li><strong>Repository-Centric Learning</strong> &mdash; Training specialized models that deeply understand individual repositories rather than relying on general-purpose LLMs.</li>
+  </ul>
+
+  <h2>Impact</h2>
+  <p>Our kGym platform and CrashFixer agent represent the first end-to-end LLM-based repair loop for real Linux kernel failures. SWE-Spot demonstrates that small, repository-specialized models can outperform much larger general-purpose LLMs on repository-specific tasks. Our empirical study on APR agent traceability provides the first systematic analysis of how repair agents navigate codebases, informing the design of more transparent and effective agents. EditLord learns reusable code transformation rules that generalize across editing tasks, while REFINE shows that context-aware patch refinement significantly improves repair quality. Across these efforts, our work has shaped how the community builds, evaluates, and understands AI agents for software engineering.</p>
+
+  <h2>Contributors</h2>
+  <div class="project-contributors">
+    <span>Baishakhi Ray</span>
+    <span>Alex Mathai</span>
+    <span>Chenxi Huang</span>
+    <span>Simin Chen</span>
+    <span>Jinjun Peng</span>
+    <span>Ira Ceka</span>
+    <span>Hailie Mitchell</span>
+    <span>Magnus Saebo</span>
+    <span>Tianjun Zhong</span>
+  </div>
+
+  <h2>Selected Publications</h2>
+  <div class="project-pubs">
+    {% assign papers = site.data.publications | where: "project", "ai-agents" %}
+    {% for pub in papers limit:6 %}
+    <div class="project-pub-item">
+      <h3 class="project-pub-item__title">
+        {% if pub.paper_url and pub.paper_url != "" %}
+          <a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+        {% else %}
+          {{ pub.title }}
+        {% endif %}
+      </h3>
+      <p class="project-pub-item__meta">{{ pub.authors }} &middot; {{ pub.venue }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="{{ '/publications/' | relative_url }}" class="project-pubs__more">View all publications &rarr;</a>
+</div>

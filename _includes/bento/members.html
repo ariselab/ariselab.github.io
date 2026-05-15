@@ -111,9 +111,14 @@
         {% for person in site.data.members.alumni %}
         <div class="member-tile member-tile--compact">
           <h4 class="member-tile__name">{{ person.name }}</h4>
-          {% if person.website and person.website != "" %}
-          <a href="{{ person.website }}" class="pill-link pill-link--sm">Website</a>
+          {% if person.first_job and person.first_job != "" %}
+          <p class="member-tile__desc">First position: {{ person.first_job }}</p>
           {% endif %}
+          <div class="member-tile__links">
+            {% if person.website and person.website != "" %}
+            <a href="{{ person.website }}" class="pill-link pill-link--sm">Website</a>
+            {% endif %}
+          </div>
         </div>
         {% endfor %}
       </div>

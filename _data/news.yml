@@ -1,17 +1,17 @@
 # Add news items here, newest first.
 # Fields: date, text
 
+- date: 2026-04-15
+  text: "<a href='https://arxiv.org/abs/2602.02690' target='_blank'>Outrunning LLM Cutoffs</a> was accepted to ICML '26."
+
+- date: 2026-04-15
+  text: "<a href='https://arxiv.org/abs/2506.08311' target='_blank'>Understanding APR Agents Through the Lens of Traceability</a> was accepted to ISSTA '26."
+
 - date: 2026-01-15
-  text: "Organized AI for Code industry roundtable."
+  text: "Organized <a href='https://spartan-nus.github.io/ai4code-roundtable-nyc.html' target='_blank'>AI for Code industry roundtable</a>."
 
 - date: 2026-01-10
   text: "ICLR'26: Two papers are in."
-
-- date: 2025-08-01
-  text: "Visiting NUS to work on coding agents."
-
-- date: 2025-06-15
-  text: "Gave talk at FSE'25 doctoral symposium on mentoring students."
 
 - date: 2025-05-20
   text: "PhD student Yangruibo Ding accepted a tenure-track faculty offer at UCLA. Congrats!!"

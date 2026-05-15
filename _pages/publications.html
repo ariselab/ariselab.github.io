@@ -20,18 +20,17 @@ permalink: /publications/
             {% endif %}
           </h3>
           <p class="pub-authors">{{ pub.authors }}</p>
-          <p class="pub-venue">{{ pub.venue }}</p>
-          {% if pub.award %}
-            <span class="pub-award">{{ pub.award }}</span>
-          {% endif %}
-          <div class="pub-links">
+          <p class="pub-venue">{{ pub.venue }}
             {% if pub.paper_url %}
               <a href="{{ pub.paper_url }}" class="pub-link" target="_blank" rel="noopener">PDF</a>
             {% endif %}
             {% if pub.code_url and pub.code_url != "" %}
               <a href="{{ pub.code_url }}" class="pub-link" target="_blank" rel="noopener">Code</a>
             {% endif %}
-          </div>
+          </p>
+          {% if pub.award %}
+            <span class="pub-award">{{ pub.award }}</span>
+          {% endif %}
         </div>
       </div>
     {% endfor %}

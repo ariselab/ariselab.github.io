@@ -7,7 +7,7 @@
         <div class="publications-list">
           {% for pub in group.papers %}
             <div class="publication-card">
-              <span class="pub-title">{{ pub.title }}</span>
+              <span class="pub-title">{% if pub.paper_url and pub.paper_url != "" %}<a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</span>
               {% if pub.venue %}<span class="pub-venue">({{ pub.venue }})</span>{% endif %}
             </div>
           {% endfor %}
