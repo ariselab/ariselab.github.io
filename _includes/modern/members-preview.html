@@ -53,8 +53,12 @@
           <div class="member-info">
             <h3 class="member-name">{{ member.name }}</h3>
             {% if member.first_job and member.first_job != "" %}
-              <span class="member-role">{{ member.first_job }}</span>
-              <span class="member-first-job">(First Job)</span>
+              {% assign job_parts = member.first_job | split: ", " %}
+              <span class="member-role">{{ job_parts[0] }}</span>
+              {% if job_parts.size > 1 %}
+                <span class="member-first-job">{{ job_parts | slice: 1, job_parts.size | join: ", " }}</span>
+              {% endif %}
+              <span class="member-first-position-label">(First Position)</span>
             {% endif %}
             {% if member.website and member.website != "" %}
               <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
