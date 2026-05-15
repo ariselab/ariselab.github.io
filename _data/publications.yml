@@ -81,7 +81,7 @@
   authors: "S Chen, Y Chen, Z Li, Y Jiang, Z Wan, Y He, D Ran, T Gu, H Li, T Xie"
   venue: "EMNLP 2025"
   year: 2025
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2502.17521"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -283,7 +283,7 @@
   authors: "Z Zhong, D Rempe, Y Chen, B Ivanovic, Y Cao, D Xu, M Pavone, B Ray"
   venue: "Conference on Robot Learning, 144-177"
   year: 2023
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2306.06344"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -292,7 +292,7 @@
   authors: "Z Zhong, D Rempe, D Xu, Y Chen, S Veer, T Che, B Ray, M Pavone"
   venue: "ICRA 2023, 3560-3566"
   year: 2023
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2210.17366"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -328,7 +328,7 @@
   authors: "MJ Min, Y Ding, L Buratti, S Pujar, G Kaiser, S Jana, B Ray"
   venue: "ICLR 2023"
   year: 2023
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2310.14053"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -337,7 +337,7 @@
   authors: "Y Ding, S Chakraborty, L Buratti, S Pujar, A Morari, G Kaiser, B Ray"
   venue: "FSE 2023"
   year: 2023
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2306.03234"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -346,7 +346,7 @@
   authors: "H Ding, V Kumar, Y Tian, Z Wang, R Kwiatkowski, X Li, MK Ramanathan"
   venue: "ACL 2023"
   year: 2023
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2306.03203"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -355,7 +355,7 @@
   authors: "MS Iqbal, Z Zhong, I Ahmad, B Ray, P Jamshidi"
   venue: "ACM Symposium on Cloud Computing 2023, 555-571"
   year: 2023
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2306.07888"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -366,7 +366,7 @@
   authors: "K Pei, Z Xuan, J Yang, S Jana, B Ray"
   venue: "IEEE Transactions on Software Engineering 49(4), 2776-2790"
   year: 2022
-  paper_url: ""
+  paper_url: "https://ieeexplore.ieee.org/document/10002189"
   code_url: ""
   award: ""
   project: "code-security"
@@ -375,7 +375,7 @@
   authors: "S Chakraborty, T Ahmed, Y Ding, PT Devanbu, B Ray"
   venue: "ESEC/FSE 2022"
   year: 2022
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2206.07585"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -384,7 +384,7 @@
   authors: "K Pei, D She, M Wang, S Geng, Z Xuan, Y David, J Yang, S Jana, B Ray"
   venue: "ESEC/FSE 2022"
   year: 2022
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2210.02853"
   code_url: ""
   award: ""
   project: "code-security"
@@ -411,16 +411,16 @@
   authors: "Z Zhong, G Kaiser, B Ray"
   venue: "IEEE Transactions on Software Engineering 49(4), 1860-1875"
   year: 2022
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2109.06126"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
 
 - title: "Detecting multi-sensor fusion errors in advanced driver-assistance systems"
   authors: "Z Zhong, Z Hu, S Guo, X Zhang, Z Zhong, B Ray"
-  venue: "FSE 2022"
+  venue: "ISSTA 2022"
   year: 2022
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2109.06404"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -438,7 +438,7 @@
   authors: "MS Iqbal, R Krishna, MA Javidian, B Ray, P Jamshidi"
   venue: "EuroSys 2022, 199-217"
   year: 2022
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2201.08413"
   code_url: ""
   award: ""
   project: "trustworthy-ai, software-modernization"
@@ -456,7 +456,7 @@
   authors: "Y Ding, S Suneja, Y Zheng, J Laredo, A Morari, G Kaiser, B Ray"
   venue: "SANER 2022"
   year: 2022
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2112.10893"
   code_url: ""
   award: ""
   project: "code-security"
@@ -476,7 +476,7 @@
   authors: "S Chakraborty, B Ray"
   venue: "ASE 2021"
   year: 2021
-  paper_url: ""
+  paper_url: "https://doi.org/10.1109/ASE51524.2021.9678559"
   code_url: ""
   award: ""
   project: "ai-agents, llm-reasoning"
@@ -485,25 +485,25 @@
   authors: "MR Parvez, W Ahmad, S Chakraborty, B Ray, KW Chang"
   venue: "Findings of EMNLP 2021, 2719-2734"
   year: 2021
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2108.11601"
   code_url: ""
   award: ""
   project: "llm-reasoning"
 
 - title: "Stateformer: Fine-grained type recovery from binaries using generative state modeling"
-  authors: "K Pei, J Guan, M Broughton, Z Chen, S Yao, D Williams-King"
+  authors: "K Pei, J Guan, M Broughton, Z Chen, S Yao, D Williams-King, V Ummadisetty, J Yang, B Ray, S Jana"
   venue: "ESEC/FSE 2021"
   year: 2021
-  paper_url: ""
+  paper_url: "https://doi.org/10.1145/3468264.3468607"
   code_url: ""
   award: ""
   project: "code-security"
 
-- title: "Direct: A transformer-based model for decompiled variable name recovery"
+- title: "DIRECT: A Transformer-based Model for Decompiled Identifier Renaming"
   authors: "V Nitin, A Saieva, B Ray, G Kaiser"
   venue: "NLP4Prog 2021"
   year: 2021
-  paper_url: ""
+  paper_url: "https://aclanthology.org/2021.nlp4prog-1.6.pdf"
   code_url: ""
   award: ""
   project: "code-security, software-modernization"
@@ -511,8 +511,8 @@
 - title: "Deep learning based vulnerability detection: Are we there yet?"
   authors: "S Chakraborty, R Krishna, Y Ding, B Ray"
   venue: "IEEE Transactions on Software Engineering 48(9), 3280-3296"
-  year: 2021
-  paper_url: ""
+  year: 2022
+  paper_url: "https://doi.org/10.1109/TSE.2021.3087402"
   code_url: ""
   award: ""
   project: "code-security, llm-reasoning"
@@ -521,7 +521,7 @@
   authors: "Z Zhong, Y Tian, B Ray"
   venue: "FASE 2021"
   year: 2021
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2010.04821"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -530,7 +530,7 @@
   authors: "WU Ahmad, S Chakraborty, B Ray, KW Chang"
   venue: "NAACL 2021"
   year: 2021
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2103.06333"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -545,10 +545,10 @@
   project: "trustworthy-ai"
 
 - title: "Towards Learning (Dis)-Similarity of Source Code from Program Contrasts"
-  authors: "Y Ding, L Buratti, S Pujar, A Morari"
-  venue: "ACL 2021"
-  year: 2021
-  paper_url: ""
+  authors: "Y Ding, L Buratti, S Pujar, A Morari, B Ray, S Chakraborty"
+  venue: "ACL 2022"
+  year: 2022
+  paper_url: "https://aclanthology.org/2022.acl-long.436.pdf"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -595,7 +595,7 @@
   authors: "C Mao, A Gupta, V Nitin, B Ray, S Song, J Yang, C Vondrick"
   venue: "ECCV 2020, 158-174"
   year: 2020
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2007.07236"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -604,7 +604,7 @@
   authors: "R Krishna, C Tang, K Sullivan, B Ray"
   venue: "IEEE Transactions on Software Engineering 48(3), 893-909"
   year: 2020
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/1910.09644"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -613,7 +613,7 @@
   authors: "W Ahmad, S Chakraborty, B Ray, KW Chang"
   venue: "ACL 2020"
   year: 2020
-  paper_url: ""
+  paper_url: "https://aclanthology.org/2020.acl-main.449.pdf"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -622,7 +622,7 @@
   authors: "Y Tian, Z Zhong, V Ordonez, G Kaiser, B Ray"
   venue: "ICSE 2020"
   year: 2020
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/1905.07831"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -631,7 +631,7 @@
   authors: "D She, Y Chen, A Shah, B Ray, S Jana"
   venue: "IEEE Symposium on Security and Privacy 2020, 1527-1543"
   year: 2020
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/1907.03756"
   code_url: ""
   award: ""
   project: "code-security, trustworthy-ai"
@@ -642,7 +642,7 @@
   authors: "C Mao, Z Zhong, J Yang, C Vondrick, B Ray"
   venue: "NeurIPS 2019"
   year: 2019
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/1909.00900"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -651,7 +651,7 @@
   authors: "K Pei, S Wang, Y Tian, J Whitehouse, C Vondrick, Y Cao, B Ray, S Jana"
   venue: "ACM SIGOPS Operating Systems Review 53(1), 59-67"
   year: 2019
-  paper_url: ""
+  paper_url: "https://doi.org/10.1145/3352020.3352030"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -660,7 +660,7 @@
   authors: "D She, K Pei, D Epstein, J Yang, B Ray, S Jana"
   venue: "IEEE Symposium on Security and Privacy 2019, 803-817"
   year: 2019
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/1807.05620"
   code_url: ""
   award: ""
   project: "code-security, trustworthy-ai"
@@ -669,7 +669,7 @@
   authors: "MM Rahman, S Chakraborty, G Kaiser, B Ray"
   venue: "SCAM 2019"
   year: 2019
-  paper_url: ""
+  paper_url: "https://ieeexplore.ieee.org/document/8930841"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -680,7 +680,7 @@
   authors: "MR Parvez, S Chakraborty, B Ray, KW Chang"
   venue: "ACL 2018"
   year: 2018
-  paper_url: ""
+  paper_url: "https://aclanthology.org/P18-1221.pdf"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -689,7 +689,7 @@
   authors: "Y Tian, K Pei, S Jana, B Ray"
   venue: "ICSE 2018"
   year: 2018
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/1708.08559"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -698,7 +698,7 @@
   authors: "C Tang, K Sullivan, B Ray"
   venue: "ICSE 2018"
   year: 2018
-  paper_url: ""
+  paper_url: "https://www.computer.org/csdl/proceedings-article/icse-companion/2018/566301a354/13bd1eSlysk"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -707,7 +707,7 @@
   authors: "MM Rahman, S Chakraborty, B Ray"
   venue: "ICSE 2018"
   year: 2018
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/1808.02911"
   code_url: ""
   award: ""
   project: "llm-reasoning"
@@ -721,14 +721,6 @@
   award: ""
   project: "code-security"
 
-- title: "Tree2tree neural translation model for learning source code changes"
-  authors: "S Chakraborty, M Allamanis, B Ray"
-  venue: "Preprint, 2018"
-  year: 2018
-  paper_url: "https://arxiv.org/abs/1810.00314"
-  code_url: ""
-  award: ""
-  project: "code-translation, ai-agents"
 
 - title: "A case study on the impact of similarity measure on information retrieval based software engineering tasks"
   authors: "MM Rahman, S Chakraborty, G Kaiser, B Ray"
@@ -754,7 +746,7 @@
   authors: "Y Tian, B Ray"
   venue: "ESEC/FSE 2017"
   year: 2017
-  paper_url: ""
+  paper_url: "https://dl.acm.org/doi/10.1145/3106237.3106300"
   code_url: ""
   award: ""
   project: "ai-agents"
