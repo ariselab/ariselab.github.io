@@ -1,0 +1,52 @@
+---
+layout: modern-page
+title: "Code Translation and Transformation"
+permalink: /projects/code-translation/
+---
+
+<a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; Back to Projects</a>
+
+<div class="project-hero">
+  <h1 class="project-hero__title">Code Translation and Transformation</h1>
+  <p class="project-hero__subtitle">Translating code across programming languages with a focus on safety and correctness.</p>
+</div>
+
+<div class="project-body">
+  <h2>Overview</h2>
+  <p>Migrating legacy codebases to modern, safer languages is a pressing need across industry and government. Our research develops techniques for automatically translating code between programming languages, with particular emphasis on the C-to-Rust translation pipeline where memory safety guarantees are at stake.</p>
+  <p>We study both the capabilities and pitfalls of ML-based translation, building neurosymbolic systems that combine the flexibility of neural models with the rigor of formal specifications.</p>
+
+  <h2>Key Directions</h2>
+  <ul>
+    <li><strong>C-to-Rust Translation</strong> &mdash; Neurosymbolic techniques that produce safer Rust code from C projects, preserving functionality while gaining memory safety.</li>
+    <li><strong>Multi-modal Specifications</strong> &mdash; Generating specifications in multiple modalities (types, contracts, tests) to guide and validate translations.</li>
+    <li><strong>Translation Quality</strong> &mdash; Empirical studies measuring the quality, correctness, and idiomatic nature of machine-translated code.</li>
+    <li><strong>Unsupervised Translation</strong> &mdash; Back-translation techniques that enable code translation without parallel training corpora.</li>
+  </ul>
+
+  <h2>Impact</h2>
+  <p>C2SaferRust is among the first systems to translate real-world C projects into safer Rust using neurosymbolic techniques, addressing a key need in the software security community. Our empirical studies on ML-based translation quality have helped set realistic expectations for automated migration tools.</p>
+
+  <h2>Contributors</h2>
+  <div class="project-contributors">
+    <span>Baishakhi Ray</span>
+  </div>
+
+  <h2>Selected Publications</h2>
+  <div class="project-pubs">
+    {% assign papers = site.data.publications | where: "project", "code-translation" %}
+    {% for pub in papers limit:6 %}
+    <div class="project-pub-item">
+      <h3 class="project-pub-item__title">
+        {% if pub.paper_url and pub.paper_url != "" %}
+          <a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+        {% else %}
+          {{ pub.title }}
+        {% endif %}
+      </h3>
+      <p class="project-pub-item__meta">{{ pub.authors }} &middot; {{ pub.venue }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="{{ '/publications/' | relative_url }}" class="project-pubs__more">View all publications &rarr;</a>
+</div>

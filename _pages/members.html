@@ -1,0 +1,105 @@
+---
+layout: modern-page
+title: "Members"
+permalink: /members/
+---
+
+{% if site.data.members.faculty.size > 0 %}
+  <h2 class="group-title">Faculty</h2>
+  <div class="members-detail-grid">
+    {% for member in site.data.members.faculty %}
+      <div class="member-detail-card">
+        <div class="member-detail-photo">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+        </div>
+        <div class="member-detail-info">
+          <h3>{{ member.name }}</h3>
+          <p class="member-role">{{ member.role }}</p>
+          {% if member.role2 %}<p class="member-role">{{ member.role2 }}</p>{% endif %}
+          <p class="member-description">{{ member.description }}</p>
+          <div class="member-meta">
+            {% if member.website %}
+              <a href="{{ member.website }}" class="member-meta-link" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+            {% if member.email and member.email != "" %}
+              <a href="mailto:{{ member.email }}" class="member-meta-link">Email</a>
+            {% endif %}
+            {% if member.google_scholar and member.google_scholar != "" %}
+              <a href="{{ member.google_scholar }}" class="member-meta-link" target="_blank" rel="noopener">Scholar</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if site.data.members.lab_members.size > 0 %}
+  <h2 class="group-title">Current Members</h2>
+  <div class="members-detail-grid">
+    {% for member in site.data.members.lab_members %}
+      <div class="member-detail-card">
+        <div class="member-detail-photo">
+          {% if member.photo and member.photo != "" %}
+            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+          {% else %}
+            <div class="member-photo-placeholder">{{ member.name | slice: 0 }}</div>
+          {% endif %}
+        </div>
+        <div class="member-detail-info">
+          <h3>{{ member.name }}</h3>
+          <span class="member-role-label">{{ member.role | default: "PhD Student" }}</span>
+          {% if member.description %}
+            <p class="member-description">{{ member.description }}</p>
+          {% endif %}
+          <div class="member-meta">
+            {% if member.website %}
+              <a href="{{ member.website }}" class="member-meta-link" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+            {% if member.email and member.email != "" %}
+              <a href="mailto:{{ member.email }}" class="member-meta-link">Email</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if site.data.members.masters_students.size > 0 %}
+  <h2 class="group-title">Masters Students</h2>
+  <div class="members-detail-grid">
+    {% for member in site.data.members.masters_students %}
+      <div class="member-detail-card">
+        <div class="member-detail-photo">
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+        </div>
+        <div class="member-detail-info">
+          <h3>{{ member.name }}</h3>
+          <p class="member-description">{{ member.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if site.data.members.alumni.size > 0 %}
+  <h2 class="group-title">Alumni</h2>
+  <div class="members-detail-grid">
+    {% for member in site.data.members.alumni %}
+      <div class="member-detail-card">
+        <div class="member-detail-info">
+          <h3>{{ member.name }}</h3>
+          {% if member.first_job %}
+            <p class="member-description">First position: {{ member.first_job }}</p>
+          {% endif %}
+          <div class="member-meta">
+            {% if member.website %}
+              <a href="{{ member.website }}" class="member-meta-link" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

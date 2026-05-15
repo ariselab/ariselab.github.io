@@ -1,0 +1,55 @@
+---
+layout: modern-page
+title: "Trustworthy and Robust AI Systems"
+permalink: /projects/trustworthy-ai/
+---
+
+<a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; Back to Projects</a>
+
+<div class="project-hero">
+  <h1 class="project-hero__title">Trustworthy and Robust AI Systems</h1>
+  <p class="project-hero__subtitle">Investigating the reliability, safety, and robustness of AI systems in software engineering and beyond.</p>
+</div>
+
+<div class="project-body">
+  <h2>Overview</h2>
+  <p>AI systems are increasingly deployed in safety-critical settings, from autonomous vehicles to software development tools. Our research studies how to make these systems more robust, how to detect and repair their failures, and how to understand the security risks introduced by the AI toolchain itself.</p>
+  <p>This spans work on DNN testing, adversarial robustness, autonomous driving simulation, compiler-level attacks on ML models, and causal approaches to system configuration.</p>
+
+  <h2>Key Directions</h2>
+  <ul>
+    <li><strong>DNN Testing &amp; Repair</strong> &mdash; Systematic methods for finding confusion and bias errors in neural networks, and techniques for repairing them.</li>
+    <li><strong>Autonomous Driving</strong> &mdash; Simulation-based testing, traffic generation, and scenario-based evaluation for self-driving systems.</li>
+    <li><strong>Adversarial Robustness</strong> &mdash; Metric learning and multitask approaches that strengthen model robustness under adversarial and natural variations.</li>
+    <li><strong>ML Toolchain Security</strong> &mdash; Discovering and exploiting vulnerabilities in deep learning compilers and infrastructure.</li>
+    <li><strong>Causal Configuration</strong> &mdash; Using causal reasoning to understand and optimize the performance of configurable systems.</li>
+  </ul>
+
+  <h2>Impact</h2>
+  <p>DeepTest was a pioneering work in automated testing of autonomous driving systems and has been highly cited. Our work on compiler backdoors was accepted at IEEE S&amp;P 2026, revealing a new attack surface in the ML supply chain. The Unicorn and Cameo systems brought causal reasoning to system performance optimization.</p>
+
+  <h2>Contributors</h2>
+  <div class="project-contributors">
+    <span>Baishakhi Ray</span>
+    <span>Simin Chen</span>
+    <span>Jinjun Peng</span>
+  </div>
+
+  <h2>Selected Publications</h2>
+  <div class="project-pubs">
+    {% assign papers = site.data.publications | where: "project", "trustworthy-ai" %}
+    {% for pub in papers limit:6 %}
+    <div class="project-pub-item">
+      <h3 class="project-pub-item__title">
+        {% if pub.paper_url and pub.paper_url != "" %}
+          <a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+        {% else %}
+          {{ pub.title }}
+        {% endif %}
+      </h3>
+      <p class="project-pub-item__meta">{{ pub.authors }} &middot; {{ pub.venue }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="{{ '/publications/' | relative_url }}" class="project-pubs__more">View all publications &rarr;</a>
+</div>

@@ -1,0 +1,44 @@
+<section class="section section--pubs" id="publications">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label">Research</span>
+      <h2 class="section__title">Publications</h2>
+    </div>
+
+    <div class="pub-table reveal">
+      <div class="pub-table__head">
+        <span class="pub-table__th pub-table__th--year">Year</span>
+        <span class="pub-table__th pub-table__th--title">Title</span>
+        <span class="pub-table__th pub-table__th--venue">Venue</span>
+        <span class="pub-table__th pub-table__th--links"></span>
+      </div>
+      {% for pub in site.data.publications %}
+      <div class="pub-row">
+        <span class="pub-row__year">{{ pub.year }}</span>
+        <div class="pub-row__main">
+          <h3 class="pub-row__title">
+            {% if pub.paper_url and pub.paper_url != "" %}
+            <a href="{{ pub.paper_url }}">{{ pub.title }}</a>
+            {% else %}
+            {{ pub.title }}
+            {% endif %}
+          </h3>
+          <p class="pub-row__authors">{{ pub.authors }}</p>
+          {% if pub.award and pub.award != "" %}
+          <span class="pub-row__award">{{ pub.award }}</span>
+          {% endif %}
+        </div>
+        <span class="pub-row__venue">{{ pub.venue }}</span>
+        <div class="pub-row__links">
+          {% if pub.paper_url and pub.paper_url != "" %}
+          <a href="{{ pub.paper_url }}" class="pill-link pill-link--sm">PDF</a>
+          {% endif %}
+          {% if pub.code_url and pub.code_url != "" %}
+          <a href="{{ pub.code_url }}" class="pill-link pill-link--sm">Code</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

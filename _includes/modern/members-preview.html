@@ -1,0 +1,73 @@
+<section class="section members-section" id="members">
+  <div class="container">
+    <h2 class="section-title">Our Team</h2>
+    <div class="members-grid">
+      {% for member in site.data.members.faculty %}
+        <div class="member-card fade-in">
+          <div class="member-photo">
+            <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{ member.name }}</h3>
+            <span class="member-role">{{ member.role }}</span>
+            {% if member.role2 %}<span class="member-role">{{ member.role2 }}</span>{% endif %}
+            {% if member.website %}
+              <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+      {% for member in site.data.members.lab_members %}
+        <div class="member-card fade-in">
+          <div class="member-photo">
+            {% if member.photo and member.photo != "" %}
+              <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+            {% else %}
+              <div class="member-photo-placeholder">{{ member.name | slice: 0 }}</div>
+            {% endif %}
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{ member.name }}</h3>
+            <span class="member-role">{{ member.role | default: "PhD Student" }}</span>
+            {% if member.website and member.website != "" %}
+              <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
+            {% else %}
+              <span class="member-link member-link--disabled">Website</span>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% if site.data.members.alumni.size > 0 %}
+    <h3 class="subsection-title">Alumni</h3>
+    <div class="members-grid">
+      {% for member in site.data.members.alumni %}
+        <div class="member-card fade-in">
+          <div class="member-photo">
+            {% if member.photo and member.photo != "" %}
+              <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
+            {% else %}
+              <div class="member-photo-placeholder">{{ member.name | slice: 0 }}</div>
+            {% endif %}
+          </div>
+          <div class="member-info">
+            <h3 class="member-name">{{ member.name }}</h3>
+            {% if member.first_job and member.first_job != "" %}
+              <span class="member-role">{{ member.first_job }}</span>
+              <span class="member-first-job">(First Job)</span>
+            {% endif %}
+            {% if member.website and member.website != "" %}
+              <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
+            {% else %}
+              <span class="member-link member-link--disabled">Website</span>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="section-action">
+      <a href="{{ '/members/' | relative_url }}" class="btn btn-outline">View All Members</a>
+    </div>
+  </div>
+</section>

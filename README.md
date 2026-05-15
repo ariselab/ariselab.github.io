@@ -1,31 +1,119 @@
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
+# ARiSE Lab Website
 
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+GitHub Pages site for the **ARiSE Lab** (Analytical Research in Software Engineering) at Columbia University.
 
-### Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file. 
+Built with [Jekyll 4](https://jekyllrb.com/) and a warm editorial design theme.
 
-# Instructions
+## Running Locally
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+### Prerequisites
 
-See more info at https://academicpages.github.io/
+macOS ships with Ruby 2.6 which is too old. You need **Ruby 3.1+**.
 
-## To run locally (not on GitHub Pages, to serve on your own computer)
+```bash
+# Install Ruby via Homebrew
+brew install ruby
 
-1. Clone the repository and made updates as detailed above
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs build-essential patch zlib1g-dev liblzma-dev`
-1. Run `bundle clean` to clean up the directory (no need to run `--force`)
-1. Run `sudo bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `bundle exec jekyll liveserve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
+# Add Homebrew Ruby to your PATH — add this line to ~/.zshrc
+export PATH="$(brew --prefix ruby)/bin:$PATH"
 
-# Changelog -- bugfixes and enhancements
+# Reload shell
+source ~/.zshrc
 
-There is one logistical issue with a ready-to-fork template theme like academic pages that makes it a little tricky to get bug fixes and updates to the core theme. If you fork this repository, customize it, then pull again, you'll probably get merge conflicts. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch. 
+# Verify Ruby version (should be 3.x)
+ruby --version
 
-To support this, all changes to the underlying code appear as a closed issue with the tag 'code change' -- get the list [here](https://github.com/academicpages/academicpages.github.io/issues?q=is%3Aclosed%20is%3Aissue%20label%3A%22code%20change%22%20). Each issue thread includes a comment linking to the single commit or a diff across multiple commits, so those with forked repositories can easily identify what they need to patch.
+# Install Bundler
+gem install bundler
+
+# Install project dependencies
+bundle install
+```
+
+### Run the dev server
+
+```bash
+bundle exec jekyll serve
+```
+
+Open http://localhost:4000. Jekyll watches for file changes and rebuilds automatically.
+
+### Quick preview (no Ruby/Jekyll required)
+
+```bash
+python3 -m http.server 8234
+```
+
+Open http://localhost:8234. Only the homepage works this way; subpages require Jekyll.
+
+## Project Structure
+
+```
+_data/                 # Site content as YAML (edit these to update)
+  lab.yml              # Lab name, description, social links
+  members.yml          # Faculty, PhD students, masters, alumni
+  publications.yml     # Papers (title, authors, venue, year, links)
+  projects.yml         # Research projects
+  news.yml             # News/announcements
+  reading.yml          # Reading group schedule
+  navigation.yml       # Top navigation links
+
+_layouts/              # Page templates
+  modern.html          # Base layout (nav + footer + fonts)
+  modern-page.html     # Inner page layout (title + content)
+
+_includes/modern/      # Reusable HTML components
+  nav.html             # Fixed navigation bar
+  hero.html            # Hero section
+  news.html            # News list
+  members-preview.html # Team member cards
+  publications-preview.html  # Recent publications
+  footer.html          # Site footer
+
+_pages/                # Content pages
+assets/css/modern.css  # All styles
+assets/js/modern.js    # Nav scroll, mobile toggle, scroll animations
+index.html             # Homepage (static preview)
+```
+
+## Editing Content
+
+All content lives in `_data/*.yml` files. Edit these to update the site — no HTML changes needed.
+
+**Add a member** — edit `_data/members.yml`:
+```yaml
+phd_students:
+  - name: "New Person"
+    photo: "/images/photo.jpg"
+    email: "email@columbia.edu"
+    website: "https://example.com"
+    description: "Research interests..."
+```
+
+**Add a publication** — edit `_data/publications.yml`:
+```yaml
+- title: "Paper Title"
+  authors: "Author One, Author Two"
+  venue: "Conference Name"
+  year: 2026
+  paper_url: "https://link-to-paper.pdf"
+  code_url: "https://github.com/repo"
+  award: "Best Paper"  # optional
+```
+
+**Add news** — edit `_data/news.yml`:
+```yaml
+- date: 2026-03-01
+  text: "Our paper was accepted at ICSE 2026!"
+```
+
+## Design
+
+- **Theme**: Warm editorial academic — cream background, refined typography
+- **Typography**: Lora (serif display) + Figtree (sans body) via Google Fonts
+- **Colors**: Cream `#faf8f5` background, wine `#7b2d4e` accent, gold `#b8963e` highlights
+- **Features**: Scroll-triggered fade-in animations, frosted glass navbar, responsive mobile layout
+
+## Credits
+
+Originally forked from [Academic Pages](https://github.com/academicpages/academicpages.github.io) (Minimal Mistakes Jekyll Theme by Michael Rose, MIT License).

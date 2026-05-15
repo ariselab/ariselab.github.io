@@ -1,0 +1,20 @@
+---
+layout: modern-page
+title: "Projects"
+permalink: /projects/
+---
+
+<div class="projects-grid">
+  {% for project in site.data.projects %}
+    <a href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}" class="project-card fade-in">
+      <div class="project-card__header">
+        <h2 class="project-card__title">{{ project.title }}</h2>
+        {% if project.status == "active" %}
+          <span class="project-card__status">Active</span>
+        {% endif %}
+      </div>
+      <p class="project-card__desc">{{ project.description }}</p>
+      <span class="project-card__cta">View papers &rarr;</span>
+    </a>
+  {% endfor %}
+</div>
