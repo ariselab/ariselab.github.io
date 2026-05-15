@@ -1,14 +1,14 @@
 ---
 layout: modern-page
-title: "AI Software Engineering Agents"
+title: "AI Software Engineering Agents and Program Repair"
 permalink: /projects/ai-agents/
 ---
 
 <a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; Back to Projects</a>
 
 <div class="project-hero">
-  <h1 class="project-hero__title">AI Software Engineering Agents</h1>
-  <p class="project-hero__subtitle">Building autonomous agents that understand, debug, and modify real-world codebases.</p>
+  <h1 class="project-hero__title">AI Software Engineering Agents and Program Repair</h1>
+  <p class="project-hero__subtitle">Building autonomous agents and program repair systems that understand, debug, and modify real-world codebases.</p>
 </div>
 
 <div class="project-body">
@@ -38,12 +38,17 @@ permalink: /projects/ai-agents/
     <span>Hailie Mitchell</span>
     <span>Magnus Saebo</span>
     <span>Tianjun Zhong</span>
+    <span>Yangruibo Ding</span>
+    <span>Kexin Pei</span>
+    <span>Saikat Chakraborty</span>
+    <span>Vikram Nitin</span>
+    <span>Rahul Krishna</span>
   </div>
 
   <h2>Selected Publications</h2>
   <div class="project-pubs">
-    {% assign papers = site.data.publications | where: "project", "ai-agents" %}
-    {% for pub in papers limit:6 %}
+    {% assign papers = site.data.publications | where_exp: "pub", "pub.project contains 'ai-agents'" %}
+    {% for pub in papers limit:30 %}
     <div class="project-pub-item">
       <h3 class="project-pub-item__title">
         {% if pub.paper_url and pub.paper_url != "" %}

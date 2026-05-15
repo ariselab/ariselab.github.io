@@ -31,6 +31,17 @@ permalink: /publications/
           {% if pub.award %}
             <span class="pub-award">{{ pub.award }}</span>
           {% endif %}
+          {% if pub.project and pub.project != "" %}
+            <div class="pub-tags">
+              {% assign projects = pub.project | split: ", " %}
+              {% for proj in projects %}
+                {% assign proj_data = site.data.projects | where: "slug", proj | first %}
+                {% if proj_data %}
+                  <a href="{{ '/projects/' | append: proj | append: '/' | relative_url }}" class="pub-tag">#{{ proj_data.title }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
       </div>
     {% endfor %}

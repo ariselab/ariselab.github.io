@@ -848,6 +848,28 @@ img {
   color: #fff;
 }
 
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.pub-tag {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 2px 8px;
+  border-radius: 12px;
+  transition: all 0.2s var(--ease);
+}
+
+.pub-tag:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
 .year-heading {
   font-family: var(--font-serif);
   font-size: 1.5rem;

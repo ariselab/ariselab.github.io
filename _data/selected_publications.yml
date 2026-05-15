@@ -11,6 +11,15 @@
     - title: "FaultLine: Automated Proof-of-Vulnerability Generation Using LLM Agents"
       venue: "Preprint"
       paper_url: "https://arxiv.org/abs/2507.15241"
+    - title: "Deep learning based vulnerability detection: Are we there yet?"
+      venue: "IEEE TSE 2021"
+      paper_url: ""
+    - title: "Neutaint: Efficient dynamic taint analysis with neural networks"
+      venue: "S&P 2020"
+      paper_url: ""
+    - title: "Neuzz: Efficient fuzzing with neural program smoothing"
+      venue: "S&P 2019"
+      paper_url: ""
 
 - category: "Model Training"
   papers:
@@ -23,6 +32,9 @@
     - title: "Cycle: Learning to self-refine the code generation"
       venue: "OOPSLA 2024"
       paper_url: "https://arxiv.org/abs/2403.18746"
+    - title: "Unified pre-training for program understanding and generation"
+      venue: "NAACL 2021"
+      paper_url: ""
 
 - category: "Agents"
   papers:
@@ -44,3 +56,15 @@
     - title: "Kgym: A platform and dataset to benchmark large language models on Linux kernel crash resolution"
       venue: "NeurIPS 2024"
       paper_url: "https://arxiv.org/abs/2407.02680"
+    - title: "Beyond accuracy: Evaluating self-consistency of code LLMs with IdentityChain"
+      venue: "ICLR 2023"
+      paper_url: ""
+
+- category: "Trustworthy AI"
+  papers:
+    - title: "Metric learning for adversarial robustness"
+      venue: "NeurIPS 2019"
+      paper_url: ""
+    - title: "DeepTest: Automated testing of deep-neural-network-driven autonomous cars"
+      venue: "ICSE 2018"
+      paper_url: ""

@@ -33,12 +33,18 @@ permalink: /projects/trustworthy-ai/
     <span>Baishakhi Ray</span>
     <span>Simin Chen</span>
     <span>Jinjun Peng</span>
+    <span>Ziyuan Zhong</span>
+    <span>Yuchi Tian</span>
+    <span>Kexin Pei</span>
+    <span>Rahul Krishna</span>
+    <span>Vikram Nitin</span>
+    <span>Chong Tang</span>
   </div>
 
   <h2>Selected Publications</h2>
   <div class="project-pubs">
-    {% assign papers = site.data.publications | where: "project", "trustworthy-ai" %}
-    {% for pub in papers limit:6 %}
+    {% assign papers = site.data.publications | where_exp: "pub", "pub.project contains 'trustworthy-ai'" %}
+    {% for pub in papers limit:30 %}
     <div class="project-pub-item">
       <h3 class="project-pub-item__title">
         {% if pub.paper_url and pub.paper_url != "" %}

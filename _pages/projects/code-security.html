@@ -32,14 +32,20 @@ permalink: /projects/code-security/
   <div class="project-contributors">
     <span>Baishakhi Ray</span>
     <span>Simin Chen</span>
+    <span>Vikram Nitin</span>
     <span>Jinjun Peng</span>
     <span>Ira Ceka</span>
+    <span>Yangruibo Ding</span>
+    <span>Kexin Pei</span>
+    <span>Dongdong She</span>
+    <span>Saikat Chakraborty</span>
+    <span>Rahul Krishna</span>
   </div>
 
   <h2>Selected Publications</h2>
   <div class="project-pubs">
-    {% assign papers = site.data.publications | where: "project", "code-security" %}
-    {% for pub in papers limit:6 %}
+    {% assign papers = site.data.publications | where_exp: "pub", "pub.project contains 'code-security'" %}
+    {% for pub in papers limit:30 %}
     <div class="project-pub-item">
       <h3 class="project-pub-item__title">
         {% if pub.paper_url and pub.paper_url != "" %}

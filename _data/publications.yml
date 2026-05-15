@@ -310,7 +310,7 @@
   authors: "W Ahmad, S Chakraborty, B Ray, KW Chang"
   venue: "EACL 2023"
   year: 2023
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2205.11116"
   code_url: ""
   award: ""
   project: "code-translation"
@@ -559,7 +559,7 @@
   authors: "Y Ding, B Ray, P Devanbu, VJ Hellendoorn"
   venue: "ASE 2020"
   year: 2020
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2008.10707"
   code_url: ""
   award: ""
   project: "ai-agents"
@@ -568,7 +568,7 @@
   authors: "Y Tian"
   venue: "ESEC/FSE 2020"
   year: 2020
-  paper_url: ""
+  paper_url: "https://dl.acm.org/doi/10.1145/3368089.3418776"
   code_url: ""
   award: ""
   project: "trustworthy-ai"
@@ -577,7 +577,7 @@
   authors: "D She, R Krishna, L Yan, S Jana, B Ray"
   venue: "ESEC/FSE 2020"
   year: 2020
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/2005.12392"
   code_url: ""
   award: ""
   project: "code-security"
@@ -586,7 +586,7 @@
   authors: "S Chakraborty, Y Ding, M Allamanis, B Ray"
   venue: "IEEE Transactions on Software Engineering 48(4), 1385-1399"
   year: 2020
-  paper_url: ""
+  paper_url: "https://arxiv.org/abs/1810.00314"
   code_url: ""
   award: ""
   project: "ai-agents"

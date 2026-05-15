@@ -1,6 +1,6 @@
 # Research themes / ongoing project areas
 
-- title: "AI Software Engineering Agents"
+- title: "AI Software Engineering Agents and Program Repair"
   slug: "ai-agents"
   description: "Building and evaluating autonomous AI agents that can understand, debug, and modify real-world codebases. This includes program repair agents, code editing systems, and benchmarks that measure agent capabilities on tasks like crash resolution and software maintenance."
   status: "active"
@@ -15,7 +15,7 @@
   description: "Research on translating code across programming languages, with a focus on safety and correctness. Current efforts include C-to-Rust translation using neurosymbolic techniques, multi-modal specification generation, and understanding the quality and pitfalls of ML-based program translation."
   status: "active"
 
-- title: "LLM Reasoning and Evaluation for Code"
+- title: "Reasoning and Evaluation for Code and LLMs"
   slug: "llm-reasoning"
   description: "Studying how large language models reason about code and building rigorous benchmarks to evaluate their capabilities. This includes work on semantic reasoning, self-consistency, dynamic evaluation under data contamination, and execution-aware pre-training."
   status: "active"
