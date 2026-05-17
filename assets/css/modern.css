@@ -114,7 +114,7 @@ img {
 }
 
 .nav-logo-img {
-  height: 46px;
+  height: 52px;
   width: auto;
   filter: brightness(0);
 }
@@ -1330,7 +1330,7 @@ a.project-card:hover .project-card__cta {
 }
 
 .footer-logo {
-  height: 60px;
+  height: 80px;
   width: auto;
   margin-bottom: 12px;
 }
@@ -1363,6 +1363,11 @@ a.project-card:hover .project-card__cta {
 .footer-social {
   color: rgba(255, 255, 255, 0.45);
   transition: color 0.2s var(--ease);
+}
+
+.footer-social svg {
+  width: 32px;
+  height: 32px;
 }
 
 .footer-social:hover {
