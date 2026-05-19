@@ -1,6 +1,12 @@
 # Add news items here, newest first.
 # Fields: date, text
 
+- date: 2026-05-18
+  text: "<a href='https://arxiv.org/abs/2509.11173' target='_blank'>Your Compiler is Backdooring Your Model</a> received a Distinguished Paper Award at S&P (Oakland) '26. Congrats!"
+
+- date: 2026-05-17
+  text: "Chenxi Huang named Gold Reviewer at ICML '26. Congrats!"
+
 - date: 2026-04-15
   text: "<a href='https://arxiv.org/abs/2602.02690' target='_blank'>Outrunning LLM Cutoffs</a> was accepted to ICML '26."
 

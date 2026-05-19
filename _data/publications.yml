@@ -45,7 +45,7 @@
   year: 2026
   paper_url: "https://arxiv.org/abs/2509.11173"
   code_url: ""
-  award: ""
+  award: "Distinguished Paper Award"
   project: "trustworthy-ai, code-security"
 
 - title: "CodeSense: a Real-World Benchmark and Dataset for Code Semantic Reasoning"
