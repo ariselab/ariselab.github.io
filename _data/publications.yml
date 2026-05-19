@@ -242,8 +242,8 @@
   project: "llm-reasoning"
 
 - title: "Automated Code Editing with Search-Generate-Modify"
-  authors: "C Liu, P Cetin, Y Patodia, S Chakraborty, Y Ding, B Ray"
-  venue: "ICSE 2024"
+  authors: "C Liu, P Cetin, Y Patodia, B Ray, S Chakraborty, Y Ding"
+  venue: "IEEE Transactions on Software Engineering, 2024"
   year: 2024
   paper_url: "https://arxiv.org/abs/2306.06490"
   code_url: ""
@@ -260,9 +260,9 @@
   project: "code-security, trustworthy-ai"
 
 - title: "Vulnerability detection with code language models: How far are we?"
-  authors: "Y Ding, Y Fu, O Ibrahim, C Sitawarin, X Chen, B Alomair, D Wagner"
-  venue: "Preprint, 2024"
-  year: 2024
+  authors: "Y Ding, Y Fu, O Ibrahim, C Sitawarin, X Chen, B Alomair, D Wagner, B Ray, Y Chen"
+  venue: "ICSE 2025"
+  year: 2025
   paper_url: "https://arxiv.org/abs/2403.18624"
   code_url: ""
   award: ""
@@ -326,8 +326,8 @@
 
 - title: "Beyond accuracy: Evaluating self-consistency of code LLMs with IdentityChain"
   authors: "MJ Min, Y Ding, L Buratti, S Pujar, G Kaiser, S Jana, B Ray"
-  venue: "ICLR 2023"
-  year: 2023
+  venue: "ICLR 2024"
+  year: 2024
   paper_url: "https://arxiv.org/abs/2310.14053"
   code_url: ""
   award: ""
@@ -335,11 +335,11 @@
 
 - title: "Concord: Clone-aware contrastive learning for source code"
   authors: "Y Ding, S Chakraborty, L Buratti, S Pujar, A Morari, G Kaiser, B Ray"
-  venue: "FSE 2023"
+  venue: "ISSTA 2023"
   year: 2023
   paper_url: "https://arxiv.org/abs/2306.03234"
   code_url: ""
-  award: ""
+  award: "Distinguished Paper Award"
   project: "llm-reasoning"
 
 - title: "A static evaluation of code completion by large language models"
@@ -404,7 +404,7 @@
   year: 2022
   paper_url: "https://dl.acm.org/doi/10.1145/3551349.3556960"
   code_url: ""
-  award: ""
+  award: "Distinguished Paper Award"
   project: "software-modernization"
 
 - title: "Neural network guided evolutionary fuzzing for finding traffic violations of autonomous vehicles"
@@ -514,7 +514,7 @@
   year: 2022
   paper_url: "https://doi.org/10.1109/TSE.2021.3087402"
   code_url: ""
-  award: ""
+  award: "Best Paper Award Runner-up"
   project: "code-security, llm-reasoning"
 
 - title: "Understanding local robustness of deep neural networks under natural variations"
