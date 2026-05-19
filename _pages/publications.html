@@ -30,8 +30,8 @@ permalink: /publications/
               <span class="pub-link">PDF</span>
             {% endif %}
           </p>
-          {% if pub.award %}
-            <span class="pub-award">{{ pub.award }}</span>
+          {% if pub.award and pub.award != "" %}
+            <span class="pub-award">&#9733; {{ pub.award }}</span>
           {% endif %}
           {% if pub.project and pub.project != "" %}
             <div class="pub-tags">

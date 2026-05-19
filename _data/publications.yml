@@ -335,11 +335,11 @@
 
 - title: "Concord: Clone-aware contrastive learning for source code"
   authors: "Y Ding, S Chakraborty, L Buratti, S Pujar, A Morari, G Kaiser, B Ray"
-  venue: "FSE 2023"
+  venue: "ISSTA 2023"
   year: 2023
   paper_url: "https://arxiv.org/abs/2306.03234"
   code_url: ""
-  award: ""
+  award: "Distinguished Paper Award"
   project: "llm-reasoning"
 
 - title: "A static evaluation of code completion by large language models"
@@ -404,7 +404,7 @@
   year: 2022
   paper_url: "https://dl.acm.org/doi/10.1145/3551349.3556960"
   code_url: ""
-  award: ""
+  award: "Distinguished Paper Award"
   project: "software-modernization"
 
 - title: "Neural network guided evolutionary fuzzing for finding traffic violations of autonomous vehicles"
@@ -514,7 +514,7 @@
   year: 2022
   paper_url: "https://doi.org/10.1109/TSE.2021.3087402"
   code_url: ""
-  award: ""
+  award: "Best Paper Award Runner-up"
   project: "code-security, llm-reasoning"
 
 - title: "Understanding local robustness of deep neural networks under natural variations"
