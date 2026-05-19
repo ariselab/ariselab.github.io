@@ -5,6 +5,7 @@
     - title: "Your Compiler is Backdooring Your Model"
       venue: "S&P 2026"
       paper_url: "https://arxiv.org/abs/2509.11173"
+      award: "Distinguished Paper Award"
     - title: "C2SaferRust: Transforming C Projects into Safer Rust with NeuroSymbolic Techniques"
       venue: "IEEE TSE, 2025"
       paper_url: "https://arxiv.org/abs/2501.14257"
