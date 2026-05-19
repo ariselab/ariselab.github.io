@@ -370,6 +370,7 @@ img { max-width: 100%; height: auto; display: block; }
 .bento-grid--overview .bento-card--news {
   grid-column: 2;
   grid-row: 2;
+  overflow: visible;
 }
 
 .bento-grid--overview .bento-card--featured-pub {
@@ -490,7 +491,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* News feed */
-.news-feed { position: relative; z-index: 1; }
+.news-feed { position: relative; z-index: 1; max-height: 300px; overflow-y: auto; }
 
 .news-feed__item {
   padding: 12px 0;

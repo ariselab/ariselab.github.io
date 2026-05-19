@@ -3,7 +3,7 @@
   <div class="container">
     <h2 class="section-title">News</h2>
     <div class="news-list">
-      {% for item in site.data.news limit:5 %}
+      {% for item in site.data.news %}
         <div class="news-item fade-in">
           <time class="news-date">{{ item.date | date: "%b %Y" }}</time>
           <p class="news-text">{{ item.text }}</p>
