@@ -39,7 +39,7 @@
         <div class="bento-card__glow"></div>
         <span class="bento-card__label">Latest News</span>
         <div class="news-feed">
-          {% for item in site.data.news limit:4 %}
+          {% for item in site.data.news %}
           <div class="news-feed__item">
             <time class="news-feed__date">{{ item.date | date: "%b %Y" }}</time>
             <p class="news-feed__text">{{ item.text }}</p>
