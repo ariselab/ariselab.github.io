@@ -1,6 +1,9 @@
 # Add news items here, newest first.
 # Fields: date, text
 
+- date: 2026-05-20
+  text: "Simin Chen accepted a tenure-track faculty offer at George Mason University. Congrats!"
+
 - date: 2026-05-18
   text: "<a href='https://arxiv.org/abs/2509.11173' target='_blank'>Your Compiler is Backdooring Your Model</a> received a Distinguished Paper Award at S&P (Oakland) '26. Congrats!"
 
