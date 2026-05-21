@@ -1,115 +1,127 @@
 ---
 layout: modern-page
-title: "Members"
+title: "Gallery"
 permalink: /members/
 ---
 
-{% if site.data.members.faculty.size > 0 %}
-  <h2 class="group-title">Faculty</h2>
-  <div class="members-detail-grid">
+{% if site.data.gallery.size > 0 %}
+  <div class="gallery-carousel">
+    <div class="gallery-main">
+      <button class="gallery-arrow gallery-arrow--left" aria-label="Previous">&lsaquo;</button>
+      <div class="gallery-main-frame">
+        <img class="gallery-main-img" src="/images/gallery/{{ site.data.gallery[0].src }}" alt="{{ site.data.gallery[0].caption }}">
+      </div>
+      <button class="gallery-arrow gallery-arrow--right" aria-label="Next">&rsaquo;</button>
+    </div>
+    <p class="gallery-caption-main">{{ site.data.gallery[0].caption }}</p>
+    <div class="gallery-thumbs">
+      {% for photo in site.data.gallery %}
+        <div class="gallery-thumb{% if forloop.first %} gallery-thumb--active{% endif %}" data-index="{{ forloop.index0 }}">
+          <img src="/images/gallery/{{ photo.src }}" alt="{{ photo.caption }}" loading="lazy">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <script>
+    (function() {
+      var photos = [{% for photo in site.data.gallery %}{ src: "/images/gallery/{{ photo.src }}", caption: "{{ photo.caption }}", position: "{{ photo.position | default: 'center 18%' }}" }{% unless forloop.last %},{% endunless %}{% endfor %}];
+      var idx = 0;
+      var mainImg = document.querySelector('.gallery-main-img');
+      var caption = document.querySelector('.gallery-caption-main');
+      var thumbs = document.querySelectorAll('.gallery-thumb');
+
+      function show(i) {
+        idx = (i + photos.length) % photos.length;
+        mainImg.src = photos[idx].src;
+        mainImg.style.objectPosition = photos[idx].position;
+        caption.textContent = photos[idx].caption;
+        thumbs.forEach(function(t) { t.classList.remove('gallery-thumb--active'); });
+        thumbs[idx].classList.add('gallery-thumb--active');
+      }
+
+      document.querySelector('.gallery-arrow--left').addEventListener('click', function() { show(idx - 1); });
+      document.querySelector('.gallery-arrow--right').addEventListener('click', function() { show(idx + 1); });
+      thumbs.forEach(function(t) {
+        t.addEventListener('click', function() { show(parseInt(this.dataset.index)); });
+      });
+    })();
+  </script>
+{% endif %}
+
+  <h2 class="group-title">Members</h2>
+  <div class="members-grid">
     {% for member in site.data.members.faculty %}
-      <div class="member-detail-card">
-        <div class="member-detail-photo">
+      <div class="member-card member-card--pi fade-in">
+        <div class="member-photo">
           <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
         </div>
-        <div class="member-detail-info">
-          <h3>{{ member.name }}</h3>
-          <p class="member-role">{{ member.role }}</p>
-          {% if member.role2 %}<p class="member-role">{{ member.role2 }}</p>{% endif %}
-          <p class="member-description">{{ member.description }}</p>
+        <div class="member-info">
+          <h3 class="member-name">{{ member.name }}</h3>
+          <span class="member-role">{{ member.role }}</span>
+          {% if member.role2 %}<span class="member-role">{{ member.role2 }}</span>{% endif %}
           <div class="member-meta">
             {% if member.website %}
-              <a href="{{ member.website }}" class="member-meta-link" target="_blank" rel="noopener">Website</a>
+              <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
             {% endif %}
             {% if member.email and member.email != "" %}
-              <a href="mailto:{{ member.email }}" class="member-meta-link">Email</a>
+              <a href="mailto:{{ member.email }}" class="member-link">Email</a>
             {% endif %}
             {% if member.google_scholar and member.google_scholar != "" %}
-              <a href="{{ member.google_scholar }}" class="member-meta-link" target="_blank" rel="noopener">Scholar</a>
+              <a href="{{ member.google_scholar }}" class="member-link" target="_blank" rel="noopener">Scholar</a>
             {% endif %}
           </div>
         </div>
       </div>
     {% endfor %}
-  </div>
-{% endif %}
-
-{% if site.data.members.lab_members.size > 0 %}
-  <h2 class="group-title">Current Members</h2>
-  <div class="members-detail-grid">
     {% for member in site.data.members.lab_members %}
-      <div class="member-detail-card">
-        <div class="member-detail-photo">
+      <div class="member-card fade-in">
+        <div class="member-photo">
           {% if member.photo and member.photo != "" %}
             <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
           {% else %}
             <div class="member-photo-placeholder">{{ member.name | slice: 0 }}</div>
           {% endif %}
         </div>
-        <div class="member-detail-info">
-          <h3>{{ member.name }}</h3>
-          <span class="member-role-label">{{ member.role | default: "PhD Student" }}</span>
-          {% if member.description %}
-            <p class="member-description">{{ member.description }}</p>
+        <div class="member-info">
+          <h3 class="member-name">{{ member.name }}</h3>
+          <span class="member-role">{{ member.role | default: "PhD Student" }}</span>
+          {% if member.website and member.website != "" %}
+            <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
+          {% else %}
+            <span class="member-link member-link--disabled">Website</span>
           {% endif %}
-          <div class="member-meta">
-            {% if member.website %}
-              <a href="{{ member.website }}" class="member-meta-link" target="_blank" rel="noopener">Website</a>
-            {% endif %}
-            {% if member.email and member.email != "" %}
-              <a href="mailto:{{ member.email }}" class="member-meta-link">Email</a>
-            {% endif %}
-          </div>
         </div>
       </div>
     {% endfor %}
   </div>
-{% endif %}
-
-{% if site.data.members.masters_students.size > 0 %}
-  <h2 class="group-title">Masters Students</h2>
-  <div class="members-detail-grid">
-    {% for member in site.data.members.masters_students %}
-      <div class="member-detail-card">
-        <div class="member-detail-photo">
-          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
-        </div>
-        <div class="member-detail-info">
-          <h3>{{ member.name }}</h3>
-          <p class="member-description">{{ member.description }}</p>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-{% endif %}
 
 {% if site.data.members.alumni.size > 0 %}
   <h2 class="group-title">Alumni</h2>
-  <div class="members-detail-grid">
+  <div class="members-grid">
     {% for member in site.data.members.alumni %}
-      <div class="member-detail-card">
-        <div class="member-detail-photo">
+      <div class="member-card fade-in">
+        <div class="member-photo">
           {% if member.photo and member.photo != "" %}
             <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" loading="lazy">
           {% else %}
             <div class="member-photo-placeholder">{{ member.name | slice: 0 }}</div>
           {% endif %}
         </div>
-        <div class="member-detail-info">
-          <h3>{{ member.name }}</h3>
-          {% if member.first_job %}
+        <div class="member-info">
+          <h3 class="member-name">{{ member.name }}</h3>
+          {% if member.first_job and member.first_job != "" %}
             {% assign job_parts = member.first_job | split: ", " %}
-            <p class="member-role">{{ job_parts[0] }}</p>
+            <span class="member-role">{{ job_parts[0] }}</span>
             {% if job_parts.size > 1 %}
-              <p class="member-first-job">{{ job_parts | slice: 1, job_parts.size | join: ", " }}</p>
+              <span class="member-first-job">{{ job_parts | slice: 1, job_parts.size | join: ", " }}</span>
             {% endif %}
-            <p class="member-first-position-label">(First Position)</p>
+            <span class="member-first-position-label">(First Position)</span>
           {% endif %}
-          <div class="member-meta">
-            {% if member.website %}
-              <a href="{{ member.website }}" class="member-meta-link" target="_blank" rel="noopener">Website</a>
-            {% endif %}
-          </div>
+          {% if member.website and member.website != "" %}
+            <a href="{{ member.website }}" class="member-link" target="_blank" rel="noopener">Website</a>
+          {% else %}
+            <span class="member-link member-link--disabled">Website</span>
+          {% endif %}
         </div>
       </div>
     {% endfor %}

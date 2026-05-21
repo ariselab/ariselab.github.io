@@ -1,0 +1,9 @@
+# Add gallery photos here.
+# Fields: src (path in /images/gallery/), caption (optional)
+
+- src: "group2.avif"
+  caption: ""
+
+- src: "group.png"
+  caption: ""
+  position: "center 10%"
