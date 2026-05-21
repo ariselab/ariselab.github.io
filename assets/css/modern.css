@@ -1662,11 +1662,9 @@ a.project-card:hover .project-card__cta {
 
 @media (max-width: 768px) {
   .gallery-main-img {
-    height: auto;
-    max-height: 300px;
-    object-fit: contain;
-    object-position: center;
-    background: var(--color-bg-alt);
+    height: 220px;
+    object-fit: cover;
+    object-position: center 18%;
   }
 }
 
