@@ -1,6 +1,9 @@
 # Add news items here, newest first.
 # Fields: date, text
 
+- date: 2026-05-27
+  text: "Organized <a href='https://spartan-nus.github.io/ai4code-roundtable-nyc.html' target='_blank'>AI for Code industry roundtable</a>."
+
 - date: 2026-05-20
   text: "Simin Chen accepted a tenure-track faculty offer at George Mason University. Congrats!"
 
@@ -15,9 +18,6 @@
 
 - date: 2026-04-15
   text: "<a href='https://arxiv.org/abs/2506.08311' target='_blank'>Understanding APR Agents Through the Lens of Traceability</a> was accepted to ISSTA '26."
-
-- date: 2026-01-15
-  text: "Organized <a href='https://spartan-nus.github.io/ai4code-roundtable-nyc.html' target='_blank'>AI for Code industry roundtable</a>."
 
 - date: 2026-01-10
   text: "ICLR'26: Two papers are in."
