@@ -1,6 +1,9 @@
 # Add news items here, newest first.
 # Fields: date, text
 
+- date: 2026-06-17
+  text: "<a href='https://arxiv.org/abs/2504.20412' target='_blank'>kAgent</a> was accepted to DL4C at ICML '26. Congrats!"
+
 - date: 2026-05-27
   text: "Organized <a href='https://spartan-nus.github.io/ai4code-roundtable-nyc.html' target='_blank'>AI for Code industry roundtable</a>."
 

@@ -3,6 +3,15 @@
 
 # ── 2026 ──
 
+- title: "kAgent: An execution-guided crash resolution agent for the Linux kernel"
+  authors: "A Mathai, C Huang, S Ma, J Kim, H Mitchell, A Nogikh, P Maniatis"
+  venue: "Deep Learning for Code (DL4C) Workshop at ICML 2026"
+  year: 2026
+  paper_url: "https://arxiv.org/abs/2504.20412"
+  code_url: ""
+  award: ""
+  project: "ai-agents"
+
 - title: "Trustworthy AI Software Engineers"
   authors: "A Aleti, B Ray, R Hoda, S Chen"
   venue: "Preprint, 2026"
@@ -148,15 +157,6 @@
   code_url: ""
   award: ""
   project: "code-security, llm-reasoning"
-
-- title: "CrashFixer: A crash resolution agent for the Linux kernel"
-  authors: "A Mathai, C Huang, S Ma, J Kim, H Mitchell, A Nogikh, P Maniatis"
-  venue: "Preprint, 2025"
-  year: 2025
-  paper_url: "https://arxiv.org/abs/2504.20412"
-  code_url: ""
-  award: ""
-  project: "ai-agents"
 
 - title: "EditLord: Learning Code Transformation Rules for Code Editing"
   authors: "W Li, A Jan, B Ray, J Yang, C Mao, K Pei"
