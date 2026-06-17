@@ -36,8 +36,8 @@
     - title: "AppForge: From Assistant to Independent Developer--Are GPTs Ready for Software Development?"
       venue: "ICLR 2025"
       paper_url: "https://arxiv.org/abs/2510.07740"
-    - title: "CrashFixer: A crash resolution agent for the Linux kernel"
-      venue: "Preprint, 2025"
+    - title: "kAgent: An execution-guided crash resolution agent for the Linux kernel"
+      venue: "Deep Learning for Code (DL4C) Workshop at ICML 2026"
       paper_url: "https://arxiv.org/abs/2504.20412"
 
 - category: "Benchmarking"
