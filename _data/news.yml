@@ -2,10 +2,10 @@
 # Fields: date, text
 
 - date: 2026-08-24
-  text: "<a href='https://arxiv.org/abs/2510.03588' target='_blank'>REFINE</a> was accepted to EMNLP (Findings) '26. Congrats!"
+  text: "<a href='https://arxiv.org/abs/2510.03588' target='_blank'>REFINE</a> was accepted to EMNLP Findings '26. Congrats!"
 
 - date: 2026-07-09
-  text: "<a href='https://arxiv.org/abs/2509.25894' target='_blank'>Red Teaming</a> was accepted to COLM '26. Congrats!"
+  text: "<a href='https://arxiv.org/abs/2509.25894' target='_blank'>Red Teaming Program Repair Agents</a> was accepted to COLM '26. Congrats!"
 
 - date: 2026-06-17
   text: "<a href='https://arxiv.org/abs/2504.20412' target='_blank'>kAgent</a> was accepted to DL4C at ICML '26. Congrats!"
