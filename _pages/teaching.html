@@ -1,12 +1,15 @@
 ---
-layout: archive
+layout: modern-page
 title: "Teaching"
 permalink: /teaching/
-author_profile: true
 ---
 
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="projects-grid">
+  <a href="{{ '/teaching/advanced-swe-ai/' | relative_url }}" class="project-card fade-in">
+    <div class="project-card__header">
+      <h2 class="project-card__title">Advanced Software Engineering with AI</h2>
+      <span class="project-card__status">Fall 2026</span>
+    </div>
+    <span class="project-card__cta">View Course &rarr;</span>
+  </a>
+</div>
