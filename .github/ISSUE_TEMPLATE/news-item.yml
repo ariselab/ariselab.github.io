@@ -1,0 +1,23 @@
+name: "Add a news item"
+description: "Add an entry to the lab's news feed"
+title: "[News] "
+labels: ["news"]
+body:
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: "Format YYYY-MM-DD"
+      placeholder: "2026-08-26"
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: News text
+      description: >
+        What happened. You can include one link using HTML, e.g.
+        <a href='https://arxiv.org/abs/xxxx' target='_blank'>Paper Title</a> was accepted to VENUE '26. Congrats!
+      placeholder: "<a href='https://arxiv.org/abs/xxxx' target='_blank'>Paper Title</a> was accepted to VENUE '26. Congrats!"
+    validations:
+      required: true
