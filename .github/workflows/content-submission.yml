@@ -1,0 +1,123 @@
+name: Content submission
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  news:
+    if: contains(github.event.issue.labels.*.name, 'news')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse issue and update news.yml
+        id: build
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = context.payload.issue.body;
+
+            function field(label) {
+              const re = new RegExp(`### ${label}\\s*\\n\\n([\\s\\S]*?)(\\n### |$)`);
+              const m = body.match(re);
+              return m ? m[1].trim() : '';
+            }
+
+            const date = field('Date');
+            const text = field('News text').replace(/"/g, '\\"');
+
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+              core.setFailed(`Date "${date}" is not in YYYY-MM-DD format.`);
+              return;
+            }
+
+            const entry = `- date: ${date}\n  text: "${text}"\n\n`;
+            const path = '_data/news.yml';
+            const content = fs.readFileSync(path, 'utf8');
+            const lines = content.split('\n');
+
+            let insertAt = lines.length;
+            for (let i = 0; i < lines.length; i++) {
+              if (lines[i].startsWith('- date: ')) {
+                const d = lines[i].replace('- date: ', '').trim();
+                if (date >= d) { insertAt = i; break; }
+              }
+            }
+
+            const before = lines.slice(0, insertAt).join('\n');
+            const after = lines.slice(insertAt).join('\n');
+            const sep = before.endsWith('\n') || before === '' ? '' : '\n';
+            fs.writeFileSync(path, before + sep + '\n' + entry + after);
+
+            core.setOutput('branch', `news/issue-${context.issue.number}`);
+      - name: Open PR
+        if: steps.build.outputs.branch
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "news: add item from issue #${{ github.event.issue.number }}"
+          branch: ${{ steps.build.outputs.branch }}
+          title: "News: ${{ github.event.issue.title }}"
+          body: "Auto-generated from #${{ github.event.issue.number }}. Review the entry, then merge to publish."
+          labels: news
+
+  publication:
+    if: contains(github.event.issue.labels.*.name, 'publication')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Parse issue and update publications.yml
+        id: build
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = context.payload.issue.body;
+
+            function field(label) {
+              const re = new RegExp(`### ${label}\\s*\\n\\n([\\s\\S]*?)(\\n### |$)`);
+              const m = body.match(re);
+              const v = m ? m[1].trim() : '';
+              return (v === '_No response_') ? '' : v;
+            }
+
+            const title = field('Paper title').replace(/"/g, '\\"');
+            const authors = field('Authors').replace(/"/g, '\\"');
+            const venue = field('Venue').replace(/"/g, '\\"');
+            const year = field('Year').trim();
+            const paperUrl = field('Paper URL');
+            const codeUrl = field('Code URL \\(optional\\)');
+            const award = field('Award \\(optional\\)').replace(/"/g, '\\"');
+            const project = field('Related project\\(s\\)').replace(/"/g, '\\"');
+
+            const path = '_data/publications.yml';
+            const content = fs.readFileSync(path, 'utf8');
+
+            // If a publication with this paper_url already exists, update its venue/year instead of duplicating.
+            const escapedUrl = paperUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const existingRe = new RegExp(`(- title: "[^"]*"\\n  authors: "[^"]*"\\n  venue: ")[^"]*(",?\\n  year: )\\d+(\\n  paper_url: "${escapedUrl}")`);
+
+            let updated;
+            if (existingRe.test(content)) {
+              updated = content.replace(existingRe, `$1${venue}$2${year}$3`);
+            } else {
+              const entry = `- title: "${title}"\n  authors: "${authors}"\n  venue: "${venue}"\n  year: ${year}\n  paper_url: "${paperUrl}"\n  code_url: "${codeUrl}"\n  award: "${award}"\n  project: "${project}"\n\n`;
+              updated = entry + content;
+            }
+
+            fs.writeFileSync(path, updated);
+            core.setOutput('branch', `publication/issue-${context.issue.number}`);
+      - name: Open PR
+        if: steps.build.outputs.branch
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "publications: update from issue #${{ github.event.issue.number }}"
+          branch: ${{ steps.build.outputs.branch }}
+          title: "Publication: ${{ github.event.issue.title }}"
+          body: "Auto-generated from #${{ github.event.issue.number }}. Review the entry, then merge to publish."
+          labels: publication
