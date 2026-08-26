@@ -13,8 +13,13 @@ jobs:
   news:
     if: contains(github.event.issue.labels.*.name, 'news')
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target: [master, gh-pages]
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.target }}
       - name: Parse issue and update news.yml
         id: build
         uses: actions/github-script@v7
@@ -55,22 +60,28 @@ jobs:
             const sep = before.endsWith('\n') || before === '' ? '' : '\n';
             fs.writeFileSync(path, before + sep + '\n' + entry + after);
 
-            core.setOutput('branch', `news/issue-${context.issue.number}`);
+            core.setOutput('branch', `news/issue-${context.issue.number}-${{ matrix.target }}`);
       - name: Open PR
         if: steps.build.outputs.branch
         uses: peter-evans/create-pull-request@v6
         with:
+          base: ${{ matrix.target }}
           commit-message: "news: add item from issue #${{ github.event.issue.number }}"
           branch: ${{ steps.build.outputs.branch }}
-          title: "News: ${{ github.event.issue.title }}"
+          title: "News: ${{ github.event.issue.title }} (${{ matrix.target }})"
           body: "Auto-generated from #${{ github.event.issue.number }}. Review the entry, then merge to publish."
           labels: news
 
   publication:
     if: contains(github.event.issue.labels.*.name, 'publication')
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        target: [master, gh-pages]
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.target }}
       - name: Parse issue and update publications.yml
         id: build
         uses: actions/github-script@v7
@@ -111,13 +122,14 @@ jobs:
             }
 
             fs.writeFileSync(path, updated);
-            core.setOutput('branch', `publication/issue-${context.issue.number}`);
+            core.setOutput('branch', `publication/issue-${context.issue.number}-${{ matrix.target }}`);
       - name: Open PR
         if: steps.build.outputs.branch
         uses: peter-evans/create-pull-request@v6
         with:
+          base: ${{ matrix.target }}
           commit-message: "publications: update from issue #${{ github.event.issue.number }}"
           branch: ${{ steps.build.outputs.branch }}
-          title: "Publication: ${{ github.event.issue.title }}"
+          title: "Publication: ${{ github.event.issue.title }} (${{ matrix.target }})"
           body: "Auto-generated from #${{ github.event.issue.number }}. Review the entry, then merge to publish."
           labels: publication
