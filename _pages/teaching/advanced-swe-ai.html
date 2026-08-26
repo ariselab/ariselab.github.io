@@ -1,0 +1,190 @@
+---
+layout: modern-page
+title: "Advanced Software Engineering with AI"
+permalink: /teaching/advanced-swe-ai/
+---
+
+<div class="project-hero">
+  <p class="project-hero__subtitle">Fall 2026 &middot; Columbia University</p>
+</div>
+
+<div class="course-tabs" id="course-tabs">
+  <div class="course-tabs__nav" role="tablist" aria-label="Course information">
+    <button class="course-tabs__btn is-active" role="tab" aria-selected="true" aria-controls="tab-course" id="tabbtn-course">Course</button>
+    <button class="course-tabs__btn" role="tab" aria-selected="false" aria-controls="tab-staff" id="tabbtn-staff">Staff</button>
+    <button class="course-tabs__btn" role="tab" aria-selected="false" aria-controls="tab-syllabus" id="tabbtn-syllabus">Syllabus</button>
+  </div>
+
+  <div class="course-tabs__panel" id="tab-course" role="tabpanel" aria-labelledby="tabbtn-course">
+    <h2>Overview</h2>
+    <p>This course explores how AI is reshaping software engineering practice. We'll start with LLM foundations and core agent capabilities like context, tools, and reasoning, then move into building and training real coding agents. From there, we'll turn to evaluating, verifying, and securing those agents through benchmarks, trustworthiness, and red teaming, wrapping up with final project presentations.</p>
+
+    <h2>Course Details</h2>
+    <ul>
+      <li><strong>Term</strong>: Fall 2026</li>
+      <li><strong>Institution</strong>: Columbia University</li>
+      <li><strong>Schedule</strong>: Fridays, 10:10am to 12:40pm</li>
+      <li><strong>Location</strong>: 451 Computer Science Building</li>
+    </ul>
+
+    <h2>Course Links</h2>
+    <ul>
+      <li><a href="https://vergil.columbia.edu/vergil/course/20263/73060/13738" target="_blank" rel="noopener">Vergil</a></li>
+    </ul>
+  </div>
+
+  <div class="course-tabs__panel" id="tab-staff" role="tabpanel" aria-labelledby="tabbtn-staff" hidden>
+    <h2>Instructors</h2>
+    <ul>
+      <li>Baishakhi Ray</li>
+    </ul>
+    <h2>Teaching Assistants</h2>
+    <ul>
+      <li>Ira Ceka</li>
+      <li>Alex Mathai</li>
+    </ul>
+  </div>
+
+  <div class="course-tabs__panel" id="tab-syllabus" role="tabpanel" aria-labelledby="tabbtn-syllabus" hidden>
+    <h2>Syllabus</h2>
+    <table class="syllabus-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Topic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>September 11, 2026</td><td>Foundations<span class="syllabus-sub">Transformers &amp; LLMs (encoder-decoder architectures, scaling laws), training paradigms overview, harness, prompt engineering</span></td></tr>
+        <tr><td>September 18, 2026</td><td>Context<span class="syllabus-sub">RAG, tool use (e.g. local tools, search tools), ReAct paradigm</span></td></tr>
+        <tr><td>September 25, 2026</td><td>Inference &amp; Serving<span class="syllabus-sub">Top-k, Ollama, vLLM, SGLang</span></td></tr>
+        <tr><td>October 2, 2026</td><td>Training<span class="syllabus-sub">Reinforcement learning, advanced RL</span></td></tr>
+        <tr><td>October 9, 2026</td><td>Coding Agents<span class="syllabus-sub">Popular CLIs (Codex, Claude Code), skills.md, subagents, memory, loops</span></td></tr>
+        <tr><td>October 16, 2026</td><td>Evaluation<span class="syllabus-sub">SWE benchmarks, evaluation methodology</span></td></tr>
+        <tr><td>October 23, 2026</td><td>Verification &amp; Trustworthiness (Part 1)</td></tr>
+        <tr><td>October 30, 2026</td><td>Verification &amp; Trustworthiness (Part 2)</td></tr>
+        <tr><td>November 6, 2026</td><td>Security &amp; Safety</td></tr>
+        <tr><td>November 13, 2026</td><td>Red Teaming</td></tr>
+        <tr><td>November 20, 2026</td><td>Advanced Topics</td></tr>
+        <tr><td>November 27, 2026</td><td>No Class (Thanksgiving Recess)</td></tr>
+        <tr><td>December 4, 2026</td><td>Final Presentations</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Course Outcomes</h2>
+    <ul>
+      <li>Explain how LLMs and agents work</li>
+      <li>Build an agent from scratch</li>
+      <li>Train and improve agents with reinforcement learning</li>
+      <li>Evaluate agents using existing SWE benchmarks and build custom evaluation suites</li>
+      <li>Understand verification layers and trustworthiness in agentic code generation</li>
+      <li>Conduct adversarial red teaming to identify vulnerabilities and harden agentic security</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .course-tabs {
+    max-width: var(--container-narrow);
+    margin: 2rem auto 0;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .course-tabs__nav {
+    display: flex;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-bg-alt);
+  }
+  .course-tabs__btn {
+    flex: 1;
+    padding: 0.9rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+  }
+  .course-tabs__btn:hover {
+    color: var(--color-text);
+    background: var(--color-surface);
+  }
+  .course-tabs__btn.is-active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+    background: var(--color-surface);
+  }
+  .course-tabs__panel {
+    padding: 1.75rem 2rem 2rem;
+  }
+  .course-tabs__panel h2 {
+    margin-top: 1.35rem;
+  }
+  .course-tabs__panel h2:first-child {
+    margin-top: 0;
+  }
+  .course-tabs__panel h3 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+  .syllabus-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .syllabus-table th,
+  .syllabus-table td {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .syllabus-table td:first-child {
+    white-space: nowrap;
+  }
+  .syllabus-table th {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .syllabus-sub {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+  }
+</style>
+
+<script>
+  (function () {
+    var root = document.getElementById('course-tabs');
+    if (!root) return;
+    var buttons = root.querySelectorAll('.course-tabs__btn');
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var targetId = btn.getAttribute('aria-controls');
+        root.querySelectorAll('.course-tabs__btn').forEach(function (b) {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        root.querySelectorAll('.course-tabs__panel').forEach(function (p) {
+          p.hidden = true;
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+        document.getElementById(targetId).hidden = false;
+      });
+    });
+  })();
+</script>
