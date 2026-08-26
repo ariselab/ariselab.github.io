@@ -115,8 +115,8 @@
 
 - title: "REFINE: Enhancing Program Repair Agents through Context-Aware Patch Refinement"
   authors: "A Pabba, S Chen, A Mathai, A Chakraborty, B Ray"
-  venue: "Preprint, 2025"
-  year: 2025
+  venue: "EMNLP (Findings), 2026"
+  year: 2026
   paper_url: "https://arxiv.org/abs/2510.03588"
   code_url: ""
   award: ""
@@ -124,8 +124,8 @@
 
 - title: "Red Teaming Program Repair Agents: When Correct Patches can Hide Vulnerabilities"
   authors: "S Chen, Y He, S Jana, B Ray"
-  venue: "Preprint, 2025"
-  year: 2025
+  venue: "COLM, 2026"
+  year: 2026
   paper_url: "https://arxiv.org/abs/2509.25894"
   code_url: ""
   award: ""
