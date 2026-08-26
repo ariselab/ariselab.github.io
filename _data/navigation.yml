@@ -12,6 +12,9 @@ main:
   - title: "Reading Group"
     url: /reading/
 
+  - title: "Teaching"
+    url: /teaching/
+
   - title: "Join Us"
     url: /#join
 
