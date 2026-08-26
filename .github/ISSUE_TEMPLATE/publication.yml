@@ -1,0 +1,64 @@
+name: "Add or update a publication"
+description: "Add a new paper, or update the venue of an existing preprint"
+title: "[Publication] "
+labels: ["publication"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+      placeholder: "Red Teaming Program Repair Agents: When Correct Patches can Hide Vulnerabilities"
+    validations:
+      required: true
+  - type: input
+    id: authors
+    attributes:
+      label: Authors
+      description: "Initials + last name, comma separated"
+      placeholder: "S Chen, Y He, S Jana, B Ray"
+    validations:
+      required: true
+  - type: input
+    id: venue
+    attributes:
+      label: Venue
+      description: "e.g. 'COLM, 2026' or 'Preprint, 2025'"
+      placeholder: "COLM, 2026"
+    validations:
+      required: true
+  - type: input
+    id: year
+    attributes:
+      label: Year
+      placeholder: "2026"
+    validations:
+      required: true
+  - type: input
+    id: paper_url
+    attributes:
+      label: Paper URL
+      placeholder: "https://arxiv.org/abs/xxxx.xxxxx"
+    validations:
+      required: true
+  - type: input
+    id: code_url
+    attributes:
+      label: Code URL (optional)
+      placeholder: "https://github.com/..."
+    validations:
+      required: false
+  - type: input
+    id: award
+    attributes:
+      label: Award (optional)
+      placeholder: "Distinguished Paper Award"
+    validations:
+      required: false
+  - type: input
+    id: project
+    attributes:
+      label: Related project(s)
+      description: "Comma-separated project slugs, e.g. ai-agents, code-security"
+      placeholder: "ai-agents"
+    validations:
+      required: false
