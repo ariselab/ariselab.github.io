@@ -3,14 +3,6 @@ description: "Add an entry to the lab's news feed"
 title: "[News] "
 labels: ["news"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Keep the `[News] ` prefix at the start of the issue title above — it's how this gets sorted and recognized as a news submission. Add a short label after it if you like (e.g. `[News] REFINE accepted`).
-
-        Linking to an external page (a paper, LinkedIn, etc.)? Use `<a href='https://...' target='_blank'>text</a>` — `target="_blank"` makes it open in a new tab.
-
-        Linking to a page on this site instead (e.g. a course or project page)? Use the path only, no domain: `<a href='/teaching/advanced-swe-ai/' target='_blank'>text</a>`. Not sure of the exact path? Leave the text plain and mention what it should link to — it'll get added on review.
   - type: input
     id: date
     attributes:
@@ -24,8 +16,9 @@ body:
     attributes:
       label: News text
       description: >
-        What happened. You can include one link using HTML, e.g.
+        Text of the news you would like to add. You may include links like
         <a href='https://arxiv.org/abs/xxxx' target='_blank'>Paper Title</a> was accepted to VENUE '26. Congrats!
+        or reference internal paths (e.g. /teaching/advanced-swe-ai/). target='_blank' makes the link open in a new tab.
       placeholder: "<a href='https://arxiv.org/abs/xxxx' target='_blank'>Paper Title</a> was accepted to VENUE '26. Congrats!"
     validations:
       required: true
