@@ -1,6 +1,9 @@
 # Add news items here, newest first.
 # Fields: date, text
 
+- date: 2026-08-27
+  text: "We will be teaching <a href='/teaching/comsw4995-f26/' target='_blank'>Advanced Software Development with AI</a> in Fall 2026!"
+
 - date: 2026-08-24
   text: "<a href='https://arxiv.org/abs/2510.03588' target='_blank'>REFINE</a> was accepted to EMNLP Findings '26. Congrats!"
 
