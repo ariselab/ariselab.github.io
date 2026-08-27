@@ -20,7 +20,7 @@ body:
 
         External link example: `<a href='https://arxiv.org/abs/xxxx' target='_blank'>Paper Title</a> was accepted to VENUE '26. Congrats!`
 
-        Internal link example: `We will be teaching <a href='/teaching/advanced-sd-ai/' target='_blank'>Advanced Software Development with AI</a> in Fall 2026!`
+        Internal link example: `We will be teaching <a href='/teaching/comsw4995-f26/' target='_blank'>Advanced Software Development with AI</a> in Fall 2026!`
 
         `target='_blank'` makes the link open in a new tab.
       placeholder: "<a href='https://arxiv.org/abs/xxxx' target='_blank'>Paper Title</a> was accepted to VENUE '26. Congrats!"
