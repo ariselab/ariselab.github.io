@@ -65,16 +65,16 @@ permalink: /teaching/comsw4995-f26/
       </thead>
       <tbody>
         <tr><td>September 11, 2026</td><td>Intro<span class="syllabus-sub"><a class="slides-tag" href="{{ '/files/comsw4995-f26/slides/lecture01-Intro.pptx.pdf' | relative_url }}" target="_blank" rel="noopener">Slides</a></span></td></tr>
-        <tr><td>September 18, 2026</td><td>Coding Agents<span class="syllabus-sub"><a class="paper-tag" href="https://arxiv.org/pdf/2609.00006v1" target="_blank" rel="noopener">Paper 1</a><a class="paper-tag" href="https://arxiv.org/pdf/2605.29442" target="_blank" rel="noopener">Paper 2</a></span></td></tr>
-        <tr><td>September 25, 2026</td><td>Inference &amp; Serving<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
-        <tr><td>October 2, 2026</td><td>Training (Part 1)<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
-        <tr><td>October 9, 2026</td><td>Training (Part 2)<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
-        <tr><td>October 16, 2026</td><td>Evaluation<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
-        <tr><td>October 23, 2026</td><td>Verification &amp; Trustworthiness (Part 1)<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
-        <tr><td>October 30, 2026</td><td>Verification &amp; Trustworthiness (Part 2)<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
-        <tr><td>November 6, 2026</td><td>Security &amp; Safety<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
-        <tr><td>November 13, 2026</td><td>Red Teaming<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
-        <tr><td>November 20, 2026</td><td>Advanced Topics<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>September 18, 2026</td><td>Coding Agents<span class="syllabus-sub"><span class="syllabus-sub-row"><a class="paper-tag" href="https://arxiv.org/pdf/2609.00006v1" target="_blank" rel="noopener">Paper 1</a><a class="paper-tag" href="https://arxiv.org/pdf/2605.29442" target="_blank" rel="noopener">Paper 2</a></span><a class="signup-tag" href="#">Example Presenter Schedule</a></span></td></tr>
+        <tr><td>September 25, 2026</td><td>Inference &amp; Serving<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
+        <tr><td>October 2, 2026</td><td>Training (Part 1)<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
+        <tr><td>October 9, 2026</td><td>Training (Part 2)<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
+        <tr><td>October 16, 2026</td><td>Evaluation<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
+        <tr><td>October 23, 2026</td><td>Verification &amp; Trustworthiness (Part 1)<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
+        <tr><td>October 30, 2026</td><td>Verification &amp; Trustworthiness (Part 2)<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
+        <tr><td>November 6, 2026</td><td>Security &amp; Safety<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
+        <tr><td>November 13, 2026</td><td>Red Teaming<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
+        <tr><td>November 20, 2026</td><td>Advanced Topics<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
         <tr><td>November 27, 2026</td><td>No Class (Thanksgiving Recess)</td></tr>
         <tr><td>December 4, 2026</td><td>Final Presentations</td></tr>
       </tbody>
@@ -168,9 +168,30 @@ permalink: /teaching/comsw4995-f26/
   }
   .syllabus-sub {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.4rem;
     margin-top: 0.35rem;
+  }
+  .syllabus-sub-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .signup-tag {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    text-decoration: none;
+    background: #fdeedb;
+    border: 1px solid #f0c48a;
+    color: #a15c1e;
+  }
+  .signup-tag:hover {
+    background: #fbe0bd;
+    border-color: #e0a75e;
+    color: #7a4315;
   }
   .paper-tag {
     display: inline-block;
