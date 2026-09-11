@@ -10,10 +10,10 @@ faculty:
     github: ""
 
 lab_members:
-  - name: "Simin Chen"
-    photo: "/images/sc.avif"
+  - name: "Nusrat Zahan"
+    photo: ""
     role: "Postdoc"
-    website: "https://siminchen.site/"
+    website: ""
   - name: "Alex Mathai"
     photo: "/images/am.avif"
     role: "PhD Student"
@@ -73,6 +73,10 @@ lab_members:
 
 masters_students: []
 alumni:
+  - name: "Simin Chen"
+    photo: "/images/sc.avif"
+    first_job: "Assistant Professor, Computer Science Department, George Mason University"
+    website: "https://siminchen.site/"
   - name: "Yangruibo Ding"
     photo: "/images/yd.avif"
     first_job: "Assistant Professor of Computer Science, UCLA"
