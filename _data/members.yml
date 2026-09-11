@@ -75,11 +75,11 @@ masters_students: []
 alumni:
   - name: "Simin Chen"
     photo: "/images/sc.avif"
-    first_job: "Assistant Professor, Computer Science Department, George Mason University"
+    first_job: "Assistant Professor, George Mason University"
     website: "https://siminchen.site/"
   - name: "Yangruibo Ding"
     photo: "/images/yd.avif"
-    first_job: "Assistant Professor of Computer Science, UCLA"
+    first_job: "Assistant Professor, UCLA"
     website: "https://robin-y-ding-columbia.github.io/"
   - name: "Vikram Nitin"
     photo: "/images/vn.jpg"
