@@ -49,8 +49,8 @@ permalink: /teaching/comsw4995-f26/
     </ul>
     <h2>Teaching Assistants</h2>
     <ul>
-      <li><a href="https://www.cs.columbia.edu/~iceka/" target="_blank" rel="noopener">Ira Ceka</a></li>
-      <li><a href="https://alexmathai.com/" target="_blank" rel="noopener">Alex Mathai</a></li>
+      <li><a href="https://www.cs.columbia.edu/~iceka/" target="_blank" rel="noopener">Ira Ceka</a> (Head TA) - <a href="mailto:iceka@cs.columbia.edu">iceka@cs.columbia.edu</a></li>
+      <li><a href="https://alexmathai.com/" target="_blank" rel="noopener">Alex Mathai</a> - <a href="mailto:alexmathai@cs.columbia.edu">alexmathai@cs.columbia.edu</a></li>
     </ul>
   </div>
 
@@ -65,16 +65,16 @@ permalink: /teaching/comsw4995-f26/
       </thead>
       <tbody>
         <tr><td>September 11, 2026</td><td>Intro</td></tr>
-        <tr><td>September 18, 2026</td><td>Context<span class="syllabus-sub">RAG, tool use (e.g. local tools, search tools), ReAct paradigm</span></td></tr>
-        <tr><td>September 25, 2026</td><td>Inference &amp; Serving<span class="syllabus-sub">Top-k, Ollama, vLLM, SGLang</span></td></tr>
-        <tr><td>October 2, 2026</td><td>Training<span class="syllabus-sub">Reinforcement learning, advanced RL</span></td></tr>
-        <tr><td>October 9, 2026</td><td>Coding Agents<span class="syllabus-sub">Popular CLIs (Codex, Claude Code), skills.md, subagents, memory, loops</span></td></tr>
-        <tr><td>October 16, 2026</td><td>Evaluation<span class="syllabus-sub">SWE benchmarks, evaluation methodology</span></td></tr>
-        <tr><td>October 23, 2026</td><td>Verification &amp; Trustworthiness (Part 1)</td></tr>
-        <tr><td>October 30, 2026</td><td>Verification &amp; Trustworthiness (Part 2)</td></tr>
-        <tr><td>November 6, 2026</td><td>Security &amp; Safety</td></tr>
-        <tr><td>November 13, 2026</td><td>Red Teaming</td></tr>
-        <tr><td>November 20, 2026</td><td>Advanced Topics</td></tr>
+        <tr><td>September 18, 2026</td><td>Context<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>September 25, 2026</td><td>Inference &amp; Serving<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>October 2, 2026</td><td>Training<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>October 9, 2026</td><td>Coding Agents<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>October 16, 2026</td><td>Evaluation<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>October 23, 2026</td><td>Verification &amp; Trustworthiness (Part 1)<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>October 30, 2026</td><td>Verification &amp; Trustworthiness (Part 2)<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>November 6, 2026</td><td>Security &amp; Safety<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>November 13, 2026</td><td>Red Teaming<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
+        <tr><td>November 20, 2026</td><td>Advanced Topics<span class="syllabus-sub"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></td></tr>
         <tr><td>November 27, 2026</td><td>No Class (Thanksgiving Recess)</td></tr>
         <tr><td>December 4, 2026</td><td>Final Presentations</td></tr>
       </tbody>
@@ -84,8 +84,7 @@ permalink: /teaching/comsw4995-f26/
     <ul>
       <li>Explain how LLMs and agents work</li>
       <li>Build an agent from scratch</li>
-      <li>Train and improve agents with reinforcement learning</li>
-      <li>Evaluate agents using existing SWE benchmarks and build custom evaluation suites</li>
+      <li>Critically assess research spanning recent advancements in the field</li>
       <li>Understand verification layers and trustworthiness in agentic code generation</li>
       <li>Conduct adversarial red teaming to identify vulnerabilities and harden agentic security</li>
     </ul>
@@ -168,9 +167,18 @@ permalink: /teaching/comsw4995-f26/
     letter-spacing: 0.03em;
   }
   .syllabus-sub {
-    display: block;
-    margin-top: 0.2rem;
-    font-size: 0.85rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+  }
+  .paper-tag {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    font-size: 0.78rem;
     color: var(--color-text-secondary);
   }
 </style>
