@@ -7,7 +7,7 @@ semester: "Fall 2018"
 # Add papers here, newest first.
 # Fields: date, paper, link, presenter
 papers:
-  - date: 2018-09-13
-    paper: "Neural Network-based Graph Embedding for Cross-Platform Binary Code Similarity Detection"
-    link: "https://arxiv.org/abs/1708.06525"
-    presenter: "Saikat Chakraborty"
+  - date: 2026-09-24
+    paper: "Training a Misaligned Reward Seeker"
+    link: "https://alignment.anthropic.com/2026/reward-seeker/"
+    presenter: "Magnus"
