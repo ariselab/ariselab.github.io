@@ -188,20 +188,53 @@ permalink: /teaching/comsw4995-f26/
     var root = document.getElementById('course-tabs');
     if (!root) return;
     var buttons = root.querySelectorAll('.course-tabs__btn');
+    var hashMap = {
+      'tabbtn-course': 'course',
+      'tabbtn-staff': 'staff',
+      'tabbtn-syllabus': 'schedule'
+    };
+
+    function activate(btn, updateHash) {
+      var targetId = btn.getAttribute('aria-controls');
+      root.querySelectorAll('.course-tabs__btn').forEach(function (b) {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      root.querySelectorAll('.course-tabs__panel').forEach(function (p) {
+        p.hidden = true;
+      });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById(targetId).hidden = false;
+      if (updateHash) {
+        var hash = hashMap[btn.id];
+        if (hash) {
+          history.replaceState(null, '', '#' + hash);
+        }
+      }
+    }
+
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        var targetId = btn.getAttribute('aria-controls');
-        root.querySelectorAll('.course-tabs__btn').forEach(function (b) {
-          b.classList.remove('is-active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        root.querySelectorAll('.course-tabs__panel').forEach(function (p) {
-          p.hidden = true;
-        });
-        btn.classList.add('is-active');
-        btn.setAttribute('aria-selected', 'true');
-        document.getElementById(targetId).hidden = false;
+        activate(btn, true);
       });
     });
+
+    function activateFromHash() {
+      var hash = window.location.hash.replace('#', '');
+      if (!hash) return;
+      var match = null;
+      Object.keys(hashMap).forEach(function (btnId) {
+        if (hashMap[btnId] === hash) {
+          match = document.getElementById(btnId);
+        }
+      });
+      if (match) {
+        activate(match, false);
+      }
+    }
+
+    activateFromHash();
+    window.addEventListener('hashchange', activateFromHash);
   })();
 </script>
