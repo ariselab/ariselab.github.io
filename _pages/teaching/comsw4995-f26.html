@@ -173,6 +173,36 @@ permalink: /teaching/comsw4995-f26/
     width: 12rem;
     white-space: nowrap;
   }
+  @media (max-width: 480px) {
+    .syllabus-table {
+      table-layout: auto;
+    }
+    .syllabus-table th:first-child,
+    .syllabus-table td:first-child {
+      width: auto;
+      white-space: normal;
+    }
+    .syllabus-sub-row {
+      max-width: 100%;
+    }
+    .paper-tag,
+    .slides-tag,
+    .signup-tag {
+      max-width: fit-content;
+      width: fit-content;
+      white-space: nowrap;
+      text-align: center;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+    }
+    .paper-tag--wrap {
+      max-width: 6.5em;
+      white-space: normal;
+      word-break: break-word;
+      padding: 0.4rem 0.5rem;
+      border-radius: 8px;
+    }
+  }
   .syllabus-table th {
     color: var(--color-text-secondary);
     font-weight: 600;
