@@ -22,6 +22,13 @@ permalink: /teaching/comsw4995-f26/
   .course-link-disabled {
     color: var(--color-text-secondary);
   }
+  .course-tabs__panel .staff-name {
+    font-weight: 600;
+    margin: 1rem 0 0.25rem;
+  }
+  .course-tabs__panel .staff-name + ul {
+    margin-top: 0;
+  }
 </style>
 
 <div class="course-tabs" id="course-tabs">
@@ -49,20 +56,24 @@ permalink: /teaching/comsw4995-f26/
     <h2>Course Links</h2>
     <ul>
       <li><a href="https://vergil.columbia.edu/vergil/course/20263/73060/13738" target="_blank" rel="noopener">Vergil</a></li>
-      <li><span class="course-link-disabled">Ed Stem</span></li>
-      <li><span class="course-link-disabled">Canvas</span></li>
+      <li><a href="https://edstem.org/us/courses/106042/discussion" target="_blank" rel="noopener">Ed Stem</a></li>
+      <li><a href="https://courseworks2.columbia.edu/courses/251625" target="_blank" rel="noopener">Canvas</a></li>
     </ul>
   </div>
 
   <div class="course-tabs__panel" id="tab-staff" role="tabpanel" aria-labelledby="tabbtn-staff" hidden>
     <h2>Instructors</h2>
-    <ul>
-      <li><a href="https://www.rayb.info/" target="_blank" rel="noopener">Baishakhi Ray</a></li>
-    </ul>
+    <p class="staff-name"><a href="https://www.rayb.info/" target="_blank" rel="noopener">Baishakhi Ray</a></p>
     <h2>Teaching Assistants</h2>
+    <p class="staff-name"><a href="https://www.cs.columbia.edu/~iceka/" target="_blank" rel="noopener">Ira Ceka</a> (Head TA)</p>
     <ul>
-      <li><a href="https://www.cs.columbia.edu/~iceka/" target="_blank" rel="noopener">Ira Ceka</a> (Head TA) - <a href="mailto:iceka@cs.columbia.edu">iceka@cs.columbia.edu</a></li>
-      <li><a href="https://alexmathai.com/" target="_blank" rel="noopener">Alex Mathai</a> - <a href="mailto:alexmathai@cs.columbia.edu">alexmathai@cs.columbia.edu</a></li>
+      <li><strong>Email</strong>: <a href="mailto:iceka@cs.columbia.edu">iceka@cs.columbia.edu</a></li>
+      <li><strong>Office Hours</strong>: By appointment.<br>Booking calendar to be shared on <a href="https://edstem.org/us/courses/106042/discussion" target="_blank" rel="noopener">Ed Discussion</a>.</li>
+    </ul>
+    <p class="staff-name"><a href="https://alexmathai.com/" target="_blank" rel="noopener">Alex Mathai</a></p>
+    <ul>
+      <li><strong>Email</strong>: <a href="mailto:alexmathai@cs.columbia.edu">alexmathai@cs.columbia.edu</a></li>
+      <li><strong>Office Hours</strong>: TBD</li>
     </ul>
   </div>
 
@@ -78,7 +89,7 @@ permalink: /teaching/comsw4995-f26/
       <tbody>
         <tr><td>Sep 11, 2026</td><td>Intro<span class="syllabus-sub"><a class="slides-tag" href="{{ '/files/comsw4995-f26/slides/lecture01-Intro.pptx.pdf' | relative_url }}" target="_blank" rel="noopener">Slides</a></span></td></tr>
         <tr><td>Sep 18, 2026</td><td>Coding Agents<span class="syllabus-sub"><span class="syllabus-sub-row"><a class="paper-tag" href="https://arxiv.org/pdf/2609.00006v1" target="_blank" rel="noopener">Paper 1</a><a class="paper-tag" href="https://arxiv.org/pdf/2605.29442" target="_blank" rel="noopener">Paper 2</a></span><details class="syllabus-examples"><summary>Supplementary Materials</summary><div class="syllabus-examples-list"><p><span class="syllabus-examples-note">General info and a sample split of how presenters might divide up the work.</span><a class="paper-tag paper-tag--wrap" href="{{ '/files/comsw4995-f26/slides/sample-presentation-plan.pdf' | relative_url }}" target="_blank" rel="noopener">Sample Presenter Schedule</a></p><p><span class="syllabus-examples-note">Example of slides covering introduction, methods, evaluation, and conclusions.</span><a class="paper-tag" href="{{ '/files/comsw4995-f26/slides/sample-slides-1.pdf' | relative_url }}" target="_blank" rel="noopener">Sample Slides</a></p><p><span class="syllabus-examples-note">Example of slides covering related work, critique, and discussion.</span><a class="paper-tag" href="{{ '/files/comsw4995-f26/slides/sample-slides-2.pdf' | relative_url }}" target="_blank" rel="noopener">Sample Slides</a></p></div></details></span></td></tr>
-        <tr><td>Sep 25, 2026</td><td>Inference &amp; Serving<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
+        <tr><td>Sep 25, 2026</td><td>Memory &amp; Context<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
         <tr><td>Oct 2, 2026</td><td>Training (Part 1)<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
         <tr><td>Oct 9, 2026</td><td>Training (Part 2)<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
         <tr><td>Oct 16, 2026</td><td>Evaluation<span class="syllabus-sub"><span class="syllabus-sub-row"><span class="paper-tag">Paper 1</span><span class="paper-tag">Paper 2</span></span></span></td></tr>
