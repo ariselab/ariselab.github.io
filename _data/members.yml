@@ -11,9 +11,9 @@ faculty:
 
 lab_members:
   - name: "Nusrat Zahan"
-    photo: ""
+    photo: "/images/nz.png"
     role: "Postdoc"
-    website: ""
+    website: "https://nzahan.net/"
   - name: "Alex Mathai"
     photo: "/images/am.avif"
     role: "PhD Student"
