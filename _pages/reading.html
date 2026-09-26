@@ -17,21 +17,26 @@ permalink: /reading/
           <th>Presenter</th>
         </tr>
       </thead>
-      <tbody>
-        {% for item in site.data.reading.papers %}
-          <tr>
-            <td class="reading-date">{{ item.date | date: "%b %d, %Y" }}</td>
-            <td>
-              {% if item.link %}
-                <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.paper }}</a>
-              {% else %}
-                {{ item.paper }}
+      {% assign sessions = site.data.reading.papers | group_by: "date" %}
+      {% for session in sessions %}
+        <tbody class="reading-session">
+          {% for item in session.items %}
+            <tr>
+              {% if forloop.first %}
+                <td class="reading-date" rowspan="{{ session.size }}">{{ item.date | date: "%b %d, %Y" }}</td>
               {% endif %}
-            </td>
-            <td><span class="presenter-tag">@{{ item.presenter }}</span></td>
-          </tr>
-        {% endfor %}
-      </tbody>
+              <td>
+                {% if item.link %}
+                  <a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.paper }}</a>
+                {% else %}
+                  {{ item.paper }}
+                {% endif %}
+              </td>
+              <td><span class="presenter-tag">@{{ item.presenter }}</span></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      {% endfor %}
     </table>
   </div>
 {% else %}
@@ -39,6 +44,19 @@ permalink: /reading/
 {% endif %}
 
 <style>
+  .reading-session tr:not(:last-child) td:not(.reading-date) {
+    border-bottom: none;
+    padding-bottom: 4px;
+  }
+  .reading-session tr:not(:first-child) td {
+    padding-top: 4px;
+  }
+  .reading-table .reading-session tr:hover {
+    background: none;
+  }
+  .reading-session:hover {
+    background: var(--color-bg-alt);
+  }
   .presenter-tag {
     display: inline-block;
     padding: 0.15rem 0.6rem;

@@ -7,7 +7,11 @@ semester: "Fall 2018"
 # Add papers here, newest first.
 # Fields: date, paper, link, presenter
 papers:
-  - date: 2026-09-24
+  - date: 2026-10-01
     paper: "Training a Misaligned Reward Seeker"
     link: "https://alignment.anthropic.com/2026/reward-seeker/"
     presenter: "Magnus"
+  - date: 2026-10-01
+    paper: "SWE-Proof: Can Language Models Resolve Real-World Issues with Machine-Checked Proofs?"
+    link: "https://arxiv.org/pdf/2609.21190"
+    presenter: "Jacob"
