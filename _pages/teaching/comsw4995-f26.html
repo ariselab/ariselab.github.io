@@ -29,11 +29,35 @@ permalink: /teaching/comsw4995-f26/
   .course-tabs__panel .staff-name + ul {
     margin-top: 0;
   }
+  .announcement {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .announcement:last-child {
+    border-bottom: none;
+  }
+  .announcement p {
+    margin: 0 0 0.35rem;
+  }
+  .announcement__date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-text-secondary);
+  }
+  .announcement__title {
+    font-weight: 600;
+  }
+  .announcement-empty {
+    color: var(--color-text-secondary);
+  }
 </style>
 
 <div class="course-tabs" id="course-tabs">
   <div class="course-tabs__nav" role="tablist" aria-label="Course information">
     <button class="course-tabs__btn is-active" role="tab" aria-selected="true" aria-controls="tab-course" id="tabbtn-course">Course</button>
+    <button class="course-tabs__btn" role="tab" aria-selected="false" aria-controls="tab-announcements" id="tabbtn-announcements">Announcements</button>
     <button class="course-tabs__btn" role="tab" aria-selected="false" aria-controls="tab-staff" id="tabbtn-staff">Staff</button>
     <button class="course-tabs__btn" role="tab" aria-selected="false" aria-controls="tab-syllabus" id="tabbtn-syllabus">Syllabus</button>
   </div>
@@ -59,6 +83,29 @@ permalink: /teaching/comsw4995-f26/
       <li><a href="https://edstem.org/us/courses/106042/discussion" target="_blank" rel="noopener">Ed Stem</a></li>
       <li><a href="https://courseworks2.columbia.edu/courses/251625" target="_blank" rel="noopener">Canvas</a></li>
     </ul>
+  </div>
+
+  <div class="course-tabs__panel" id="tab-announcements" role="tabpanel" aria-labelledby="tabbtn-announcements" hidden>
+    <h2>Announcements</h2>
+    <!-- Add new announcements at the top, newest first:
+    <div class="announcement">
+      <p class="announcement__date">Sep 26, 2026</p>
+      <p class="announcement__title">Title</p>
+      <p>Body text.</p>
+    </div>
+    -->
+    <div class="announcement">
+      <p class="announcement__date">Sep 26, 2026</p>
+      <p class="announcement__title"><a href="https://edstem.org/us/courses/106042/discussion/8314737" target="_blank" rel="noopener">Upload Your Presentation Slides to the Shared Google Drive</a></p>
+    </div>
+    <div class="announcement">
+      <p class="announcement__date">Sep 17, 2026</p>
+      <p class="announcement__title"><a href="https://edstem.org/us/courses/106042/discussion/8279164" target="_blank" rel="noopener">TA Office Hours</a></p>
+    </div>
+    <div class="announcement">
+      <p class="announcement__date">Sep 14, 2026</p>
+      <p class="announcement__title"><a href="https://edstem.org/us/courses/106042/discussion/8269853" target="_blank" rel="noopener">Last call to sign up for presentations!</a></p>
+    </div>
   </div>
 
   <div class="course-tabs__panel" id="tab-staff" role="tabpanel" aria-labelledby="tabbtn-staff" hidden>
@@ -153,6 +200,12 @@ permalink: /teaching/comsw4995-f26/
   }
   .course-tabs__panel {
     padding: 1.75rem 2rem 2rem;
+  }
+  @media (max-width: 480px) {
+    .course-tabs__btn {
+      padding: 0.8rem 0.3rem;
+      font-size: 0.82rem;
+    }
   }
   .course-tabs__panel h2 {
     margin-top: 1.35rem;
@@ -366,6 +419,7 @@ permalink: /teaching/comsw4995-f26/
     var buttons = root.querySelectorAll('.course-tabs__btn');
     var hashMap = {
       'tabbtn-course': 'course',
+      'tabbtn-announcements': 'announcements',
       'tabbtn-staff': 'staff',
       'tabbtn-syllabus': 'schedule'
     };
