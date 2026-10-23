@@ -3,6 +3,14 @@ description: "Add a paper to the reading group list"
 labels: ["reading"]
 body:
   - type: input
+    id: date
+    attributes:
+      label: Date
+      description: "Format YYYY-MM-DD"
+      placeholder: "2026-10-23"
+    validations:
+      required: true
+  - type: input
     id: presenter
     attributes:
       label: First name
