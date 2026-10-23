@@ -7,6 +7,10 @@ semester: "Fall 2018"
 # Add papers here, newest first.
 # Fields: date, paper, link, presenter
 papers:
+  - date: 2026-10-29
+    paper: "LLMs are making formal software verification feasible at a much larger scale"
+    link: "https://www.anthropic.com/research/formal-verification"
+    presenter: "Kanav"
   - date: 2026-10-01
     paper: "Training a Misaligned Reward Seeker"
     link: "https://alignment.anthropic.com/2026/reward-seeker/"
