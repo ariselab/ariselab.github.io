@@ -1,5 +1,6 @@
 name: "Add or update a publication"
 description: "Add a new paper, or update the venue of an existing preprint"
+title: "[Publication] "
 labels: ["publication"]
 body:
   - type: input
