@@ -122,6 +122,7 @@ jobs:
             lines.splice(idx + 1, 0, entry.trimEnd());
             fs.writeFileSync(path, lines.join('\n'));
 
+            core.setOutput('paper', field('Paper title'));
             core.setOutput('branch', `reading/issue-${context.issue.number}-${{ matrix.target }}`);
       - name: Open PR
         if: steps.build.outputs.branch
@@ -130,7 +131,7 @@ jobs:
           base: ${{ matrix.target }}
           commit-message: "reading: add paper from issue #${{ github.event.issue.number }}"
           branch: ${{ steps.build.outputs.branch }}
-          title: "Reading: ${{ github.event.issue.title }} (${{ matrix.target }})"
+          title: "Reading: ${{ steps.build.outputs.paper }} (${{ matrix.target }})"
           body: "Auto-generated from #${{ github.event.issue.number }}. Review the entry, then merge to publish."
           labels: reading
 
