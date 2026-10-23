@@ -100,8 +100,12 @@ jobs:
             const presenter = field('First name').replace(/"/g, '\\"');
             const paper = field('Paper title').replace(/"/g, '\\"');
             const link = field('Link');
-            const date = context.payload.issue.created_at.slice(0, 10);
+            const date = field('Date');
 
+            if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+              core.setFailed(`Date "${date}" is not in YYYY-MM-DD format.`);
+              return;
+            }
             if (!presenter || !paper || !link) {
               core.setFailed('First name, paper title and link are all required.');
               return;
@@ -111,7 +115,7 @@ jobs:
             const content = fs.readFileSync(path, 'utf8');
             const entry = `  - date: ${date}\n    paper: "${paper}"\n    link: "${link}"\n    presenter: "${presenter}"\n`;
 
-            // Newest first: insert right after the "papers:" line.
+            // Newest first: insert before the first paper with an earlier or equal date.
             const lines = content.split('\n');
             const idx = lines.findIndex(l => /^papers:\s*(\[\])?\s*$/.test(l));
             if (idx === -1) {
@@ -119,9 +123,16 @@ jobs:
               return;
             }
             lines[idx] = 'papers:';
-            lines.splice(idx + 1, 0, entry.trimEnd());
+            let insertAt = idx + 1;
+            while (insertAt < lines.length && (lines[insertAt].startsWith('    ') || lines[insertAt].startsWith('  - '))) {
+              const m = lines[insertAt].match(/^  - date: (\S+)/);
+              if (m && date >= m[1]) break;
+              insertAt++;
+            }
+            lines.splice(insertAt, 0, entry.trimEnd());
             fs.writeFileSync(path, lines.join('\n'));
 
+            core.setOutput('paper', field('Paper title'));
             core.setOutput('branch', `reading/issue-${context.issue.number}-${{ matrix.target }}`);
       - name: Open PR
         if: steps.build.outputs.branch
@@ -130,7 +141,7 @@ jobs:
           base: ${{ matrix.target }}
           commit-message: "reading: add paper from issue #${{ github.event.issue.number }}"
           branch: ${{ steps.build.outputs.branch }}
-          title: "Reading: ${{ github.event.issue.title }} (${{ matrix.target }})"
+          title: "Reading: ${{ steps.build.outputs.paper }} (${{ matrix.target }})"
           body: "Auto-generated from #${{ github.event.issue.number }}. Review the entry, then merge to publish."
           labels: reading
 
