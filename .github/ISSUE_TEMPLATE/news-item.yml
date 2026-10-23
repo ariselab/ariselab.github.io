@@ -1,5 +1,6 @@
 name: "Add a news item"
 description: "Add an entry to the lab's news feed"
+title: "[News] "
 labels: ["news"]
 body:
   - type: input
