@@ -7,6 +7,10 @@ semester: "Fall 2018"
 # Add papers here, newest first.
 # Fields: date, paper, link, presenter
 papers:
+  - date: 2026-11-05
+    paper: "Neural Networks Are Already Clean"
+    link: "https://already-clean.goodfire.com/"
+    presenter: "Jinjun"
   - date: 2026-10-29
     paper: "LLMs are making formal software verification feasible at a much larger scale"
     link: "https://www.anthropic.com/research/formal-verification"
