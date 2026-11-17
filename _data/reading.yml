@@ -7,6 +7,10 @@ semester: "Fall 2018"
 # Add papers here, newest first.
 # Fields: date, paper, link, presenter
 papers:
+  - date: 2026-11-19
+    paper: "Decentralized Multi-Agent Systems with Shared Context"
+    link: "https://arxiv.org/abs/2606.10662"
+    presenter: "In Keun"
   - date: 2026-11-05
     paper: "Neural Networks Are Already Clean"
     link: "https://already-clean.goodfire.com/"
